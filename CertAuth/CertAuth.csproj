@@ -13,7 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Middlewares\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Settings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="local.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,8 @@
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\bin\Debug\netcoreapp3.1\Models.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\bin\Debug\netcoreapp3.1\Models.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\obj\Debug\netcoreapp3.1\Models.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Models\obj\Debug\netcoreapp3.1\Models.pdb

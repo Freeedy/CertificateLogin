@@ -2,7 +2,6 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\bin\Debug\net
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\bin\Debug\netcoreapp3.1\appsettings.json
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\bin\Debug\netcoreapp3.1\CertAuth.exe
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.csprojAssemblyReference.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.AssemblyInfoInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.AssemblyInfo.cs
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.RazorTargetAssemblyInfo.cache
@@ -18,3 +17,5 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\net
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.dll
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.pdb
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.genruntimeconfig.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\bin\Debug\netcoreapp3.1\local.pfx
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertAuth\obj\Debug\netcoreapp3.1\CertAuth.csprojAssemblyReference.cache

@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 
 namespace CertAuth
 {
+    //passs 111222
+
     public class Program
     {
         public static void Main(string[] args)

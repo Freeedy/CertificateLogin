@@ -17,7 +17,7 @@ namespace CertAuth.Controllers
 
        [HttpGet]
        [Route("TestCert")]
-       [CustomAuth]
+       [Authorize]
        public async Task<string> GetValue()
         {
             return "tested";
@@ -25,5 +25,11 @@ namespace CertAuth.Controllers
 
 
 
+        [HttpGet]
+        [Route("test")]
+        public async Task<string> TestMethod()
+        {
+            return "TestMethod";
+        }
     }
 }
