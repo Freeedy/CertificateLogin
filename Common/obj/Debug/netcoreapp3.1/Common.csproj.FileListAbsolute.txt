@@ -4,6 +4,8 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\bin\Debug\netco
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.Resources.Resource.resources
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.csproj.GenerateResource.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache

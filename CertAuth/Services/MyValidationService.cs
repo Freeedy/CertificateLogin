@@ -17,6 +17,8 @@ namespace CertAuth.Services
             //{
             //    return true;
             //}
+
+
             if ( clientCertificate!=null)
             {
                 return true;

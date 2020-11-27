@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using CertAuth.Helpers;
+using CertAuth.Installers;
 using CertAuth.Services;
+using Common;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using Models;
+using Models.ServiceParameters.LoginParameters;
+using SecurityManager.Models;
+using Services.Services.ValidationServices;
 
 namespace CertAuth
 {
@@ -24,38 +32,49 @@ namespace CertAuth
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services )//, IConfiguration con )
+        public void ConfigureServices(IServiceCollection services)//, IConfiguration con )
         {
 
-
-            services.AddControllersWithViews();
-            services.AddMvc();
-            services.AddTransient<MyValidationService>();
+            services.InstallServicesAssembly(Configuration);
+            //////services.AddControllersWithViews();
+            // services.AddMvc();
+            //services.AddTransient<MyValidationService>();
             services.AddAuthentication(
 
                 CertificateAuthenticationDefaults.AuthenticationScheme
                 ).AddCertificate(options =>
                 {
+                    options.AllowedCertificateTypes = CertificateTypes.Chained;
                     options.Events = new CertificateAuthenticationEvents
                     {
-                        OnCertificateValidated = context =>
+                        OnCertificateValidated = async (context) =>
                         {
-                            var validationService = context.HttpContext.RequestServices.GetService<MyValidationService>();
-                            if (validationService.ValidateCertificate(context.ClientCertificate))
+                            
+                            Customer customer = new Customer
                             {
-                                context.Success();
-                            }
-                            else
+                                Audience = "SxmVips",
+                                Minutes = 15,
+                                Secret = "OFRC1j9aaR2BvADxNWlG2pmuD392UfQBZZLM1fuzDEzDlEpSsn+btrpJKd3FfY855OMA9oK4Mc8y48eYUrVUSw==",
+                                SecurityAlgorithm = SecurityAlgorithms.HmacSha256Signature
+                            };
+
+                            var validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
+
+                            ContainerResult<CertificateLoginOutput> validationServiceResult = await validationService.Login(new CertificateLoginInput
                             {
-                                context.Fail("Invalid Cert");
-                            }
-                            return Task.CompletedTask;
+                                Customer = customer,
+                                LoginCertificate = context.ClientCertificate
+                            });
+                            context.Response.StatusCode= 201; 
+                            
                         },
                         OnAuthenticationFailed = contex =>
                         {
                             contex.Fail("Invalid Cert");
                             return Task.CompletedTask;
                         }
+                        
+                       
                     };
                 });
 

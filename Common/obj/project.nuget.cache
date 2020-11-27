@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "6MLOn4fhkYQjQ5OkQPkBhV9X+QkJ7h5u8e2svcBpDHy6JOASJ9bIWxRFsN3EGfxcZYlk/3VaJSgswAih3Afe3Q==",
+  "dgSpecHash": "sNJXQu6g8xbPdL+WLX2FwZk+iJ2i6uIce+Qnj5qBGmSeyuioPzy25ZK3vdn04aeFg+MvrJu3YXnGzFK7T3Pmzg==",
   "success": true,
   "projectFilePath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.5\\microsoft.extensions.configuration.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.10\\microsoft.extensions.configuration.abstractions.3.1.10.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.5\\microsoft.extensions.configuration.fileextensions.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.5\\microsoft.extensions.configuration.json.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.5\\microsoft.extensions.fileproviders.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.5\\microsoft.extensions.fileproviders.physical.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.5\\microsoft.extensions.filesystemglobbing.3.1.5.nupkg.sha512",
+    "C:\\Users\\farid\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.10\\microsoft.extensions.primitives.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

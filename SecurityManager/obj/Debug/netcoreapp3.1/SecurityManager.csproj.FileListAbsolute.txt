@@ -1,0 +1,9 @@
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.deps.json
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfoInputs.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfo.cs
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csprojAssemblyReference.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csproj.CoreCompileInputs.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.pdb
