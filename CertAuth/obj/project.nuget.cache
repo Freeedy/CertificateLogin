@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OLSA0faJBzIg+7o39pxa609jCa9JFQbx5m4j01NyGnWWQHONB+KHFVb+Z3gJZxOg243KxVMLDDtVUQKOeKzpzA==",
+  "dgSpecHash": "VbfPigaJPl4Idf541L6yjvQKWR8G4H6ahTup588L2AHE6W5sqaG0R1SUiqYVxMxwwpu0X9zXsRkPJ7cbWg0MMw==",
   "success": true,
   "projectFilePath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertAuth\\CertAuth.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\farid\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\farid\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\farid\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
     "C:\\Users\\farid\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
@@ -110,5 +111,16 @@
     "C:\\Users\\farid\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle 1.8.6.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

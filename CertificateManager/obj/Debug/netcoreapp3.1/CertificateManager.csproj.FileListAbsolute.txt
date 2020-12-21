@@ -1,0 +1,9 @@
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\bin\Debug\netcoreapp3.1\CertificateManager.deps.json
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\bin\Debug\netcoreapp3.1\CertificateManager.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\bin\Debug\netcoreapp3.1\CertificateManager.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.csprojAssemblyReference.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.AssemblyInfoInputs.cache
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.AssemblyInfo.cs
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.dll
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertificateManager\obj\Debug\netcoreapp3.1\CertificateManager.csproj.CoreCompileInputs.cache

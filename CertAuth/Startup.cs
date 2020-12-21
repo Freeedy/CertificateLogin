@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CertAuth.Helpers;
 using CertAuth.Installers;
 using CertAuth.Services;
+using CertificateManager;
 using Common;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Builder;
@@ -42,42 +43,56 @@ namespace CertAuth
             services.AddAuthentication(
 
                 CertificateAuthenticationDefaults.AuthenticationScheme
-                ).AddCertificate(options =>
+                )
+              
+         
+            .AddCertificate(options =>
+            {
+                options.AllowedCertificateTypes = CertificateTypes.Chained;
+                options.Events = new CertificateAuthenticationEvents
                 {
-                    options.AllowedCertificateTypes = CertificateTypes.Chained;
-                    options.Events = new CertificateAuthenticationEvents
+                    OnCertificateValidated = async (context) =>
                     {
-                        OnCertificateValidated = async (context) =>
-                        {
-                            
-                            Customer customer = new Customer
-                            {
-                                Audience = "SxmVips",
-                                Minutes = 15,
-                                Secret = "OFRC1j9aaR2BvADxNWlG2pmuD392UfQBZZLM1fuzDEzDlEpSsn+btrpJKd3FfY855OMA9oK4Mc8y48eYUrVUSw==",
-                                SecurityAlgorithm = SecurityAlgorithms.HmacSha256Signature
-                            };
 
-                            var validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
+                        //Customer customer = new Customer
+                        //{
+                        //    Audience = "SxmVips",
+                        //    Minutes = 15,
+                        //    Secret = "OFRC1j9aaR2BvADxNWlG2pmuD392UfQBZZLM1fuzDEzDlEpSsn+btrpJKd3FfY855OMA9oK4Mc8y48eYUrVUSw==",
+                        //    SecurityAlgorithm = SecurityAlgorithms.HmacSha256Signature
+                        //};
 
-                            ContainerResult<CertificateLoginOutput> validationServiceResult = await validationService.Login(new CertificateLoginInput
-                            {
-                                Customer = customer,
-                                LoginCertificate = context.ClientCertificate
-                            });
-                            context.Response.StatusCode= 201; 
-                            
-                        },
-                        OnAuthenticationFailed = contex =>
-                        {
-                            contex.Fail("Invalid Cert");
-                            return Task.CompletedTask;
-                        }
+                        //var validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
+
+                        //ContainerResult<CertificateLoginOutput> validationServiceResult = await validationService.Login(new CertificateLoginInput
+                        //{
+                        //    Customer = customer,
+                        //    LoginCertificate = context.ClientCertificate
+                        //});
+
+                        CertManager.ParseExtension(context.ClientCertificate);
+
+                        var claims = new[]
+                       {
+                            new Claim(ClaimTypes.NameIdentifier, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer),
+                            new Claim(ClaimTypes.Name, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer)
+                        };
+
+                        context.Principal = new ClaimsPrincipal(new ClaimsIdentity(claims, context.Scheme.Name));
+
                         
-                       
-                    };
-                });
+                        context.Response.StatusCode= 203;
 
+                        context.Success();
+
+                       // context.Fail("Certificate Fail");
+                        
+                    }
+
+
+                };
+            });
+           
             //services.AddMvc();
             //services.AddControllers();
             //services.AddAuthentication(

@@ -29,6 +29,7 @@ namespace CertAuth
             var whb = Host.CreateDefaultBuilder(args)
           .ConfigureWebHostDefaults(webBuilder =>
           {
+              
               webBuilder.UseStartup<Startup>();
               webBuilder.ConfigureKestrel(o =>
               {
@@ -47,6 +48,11 @@ namespace CertAuth
                           ClientCertificateMode = ClientCertificateMode.AllowCertificate,
                           SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
                           ServerCertificate = certificate
+                          //,
+                          //ServerCertificateSelector= (connectionContext, name) =>
+                          //{
+                          //    return null ;
+                          //}
                       };
                       listenOptions.UseHttps(httpsConnectionAdapterOptions);
                   });
