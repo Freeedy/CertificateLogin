@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CertificateManager.Objects.Static
+namespace FrdCoreCrypt.Objects.Static
 {
     public class CertificateOIDS
     {
@@ -20,9 +20,9 @@ namespace CertificateManager.Objects.Static
 
         public const string AuthorityInformationAccess = "1.3.6.1.5.5.7.1.1";
         public const string CertificateTemplateInformation = "1.3.6.1.4.1.311.21.7";
-        public const string ApplicationPolicies = "1.3.6.1.4.1.311.21.10"; 
+        public const string ApplicationPolicies = "1.3.6.1.4.1.311.21.10";
 
-
+        public const string OCSP = "1.3.6.1.5.5.7.48.1";
 
 
         public class SubjectOIds

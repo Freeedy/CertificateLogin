@@ -2,8 +2,8 @@
 
 using BC::Org.BouncyCastle.Asn1;
 using BC::Org.BouncyCastle.X509;
-using CertificateManager.Objects;
-using CertificateManager.Objects.Static;
+using FrdCoreCrypt.Objects;
+using FrdCoreCrypt.Objects.Static;
 using FrdCoreCrypt;
 using System;
 using System.Collections;
@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 using X509Certificate = BC::Org.BouncyCastle.X509.X509Certificate;
 
 
-namespace CertificateManager
+namespace FrdCoreCrypt
 {
     public static  class CertManager
     {
@@ -98,6 +98,8 @@ namespace CertificateManager
         }
 
 
+        
+
         public static void ParseExtension(X509Certificate2 cert)
         {
 
@@ -106,6 +108,8 @@ namespace CertificateManager
             
 
             var result = ocspclient.ValidateOCSPx509_2(cert);
+
+            string empi = cert.GetExtentionValue(CertificateOIDS.SubjectAlternativeName); 
             foreach (X509Extension extension in cert.Extensions)
             {
                 // Create an AsnEncodedData object using the extensions information.

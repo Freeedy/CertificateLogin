@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CertAuth.Helpers;
 using CertAuth.Installers;
 using CertAuth.Services;
-using CertificateManager;
+using FrdCoreCrypt;
 using Common;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Builder;

@@ -6,7 +6,7 @@ using BC::Org.BouncyCastle.Asn1.X509;
 using BC::Org.BouncyCastle.Math;
 using BC::Org.BouncyCastle.Ocsp;
 using BC::Org.BouncyCastle.X509;
-using CertificateManager;
+using FrdCoreCrypt;
 using FrdCoreCrypt.Enums;
 using FrdCoreCrypt.Objects;
 using System;
@@ -28,8 +28,7 @@ namespace FrdCoreCrypt
     {
 
 
-        protected static Asn1Object GetExtensionValue(X509Certificate cert,
-              string oid)
+        public static Asn1Object GetExtensionValue(X509Certificate cert, string oid)
         {
             if (cert == null)
             {
