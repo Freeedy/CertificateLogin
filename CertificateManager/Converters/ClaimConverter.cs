@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using X509Certificate = BC::Org.BouncyCastle.X509.X509Certificate;
+using System.Security.Claims;
 
 namespace FrdCoreCrypt.Converters
 {
@@ -18,7 +19,16 @@ namespace FrdCoreCrypt.Converters
     {
         
 
+        public List<Claim> GetClaimsFromCertificate(X509Certificate2 certificate2)
+        {
 
+            var uniquename = CertManager.GetUniqueName(certificate2); 
+
+
+
+
+            return null;
+        }
 
 
 
