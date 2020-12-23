@@ -75,13 +75,6 @@ namespace FrdCoreCrypt
 
 
 
-
-
-
-
-
-
-
             // cert.SubjectDN.
 
             return result;
@@ -99,6 +92,7 @@ namespace FrdCoreCrypt
 
 
         
+
 
         public static void ParseExtension(X509Certificate2 cert)
         {

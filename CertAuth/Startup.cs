@@ -19,6 +19,7 @@ using Models;
 using Models.ServiceParameters.LoginParameters;
 using SecurityManager.Models;
 using Services.Services.ValidationServices;
+using FrdCoreCrypt.Converters;
 
 namespace CertAuth
 {
@@ -70,7 +71,10 @@ namespace CertAuth
                         //    LoginCertificate = context.ClientCertificate
                         //});
 
-                        CertManager.ParseExtension(context.ClientCertificate);
+                        //  CertManager.ParseExtension(context.ClientCertificate);
+
+
+                        var claimss = new ClaimConverter().GetClaimsFromCertificate(context.ClientCertificate);
 
                         var claims = new[]
                        {

@@ -46,6 +46,10 @@ namespace FrdCoreCrypt
             string result = Encoding.Default.GetString(ext.GetOctets());
             Console.WriteLine(result);
             //}
+            X509Name issuer = X509Name.GetInstance(ext.ToAsn1Object());
+            
+            GeneralName name = new GeneralName(0, ext);
+            result = name.Name.ToString();
             //DerIA5String.GetInstance()
 
             // Asn1TaggedObject taggedObject = (Asn1TaggedObject)element[1];
