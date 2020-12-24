@@ -33,12 +33,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectSerialNumber))
                     {
-                        _claims[CertificateClaims.SubjectSerialNumber] = new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber);
+                        _claims[CertificateClaims.SubjectSerialNumber] = new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber,ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectSerialNumber, new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber));
+                        _claims.Add(CertificateClaims.SubjectSerialNumber, new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber, ClaimValueTypes.String));
                     }
 
                 }
@@ -59,12 +59,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectCommonName))
                     {
-                        _claims[CertificateClaims.SubjectCommonName] = new Claim(CertificateClaims.SubjectCommonName, _commonname);
+                        _claims[CertificateClaims.SubjectCommonName] = new Claim(CertificateClaims.SubjectCommonName, _commonname, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectCommonName, new Claim(CertificateClaims.SubjectCommonName, _commonname));
+                        _claims.Add(CertificateClaims.SubjectCommonName, new Claim(CertificateClaims.SubjectCommonName, _commonname, ClaimValueTypes.String));
                     }
 
                 }
@@ -86,12 +86,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectGivenName))
                     {
-                        _claims[CertificateClaims.SubjectGivenName] = new Claim(CertificateClaims.SubjectGivenName, _givenname);
+                        _claims[CertificateClaims.SubjectGivenName] = new Claim(CertificateClaims.SubjectGivenName, _givenname, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectGivenName, new Claim(CertificateClaims.SubjectGivenName, _givenname));
+                        _claims.Add(CertificateClaims.SubjectGivenName, new Claim(CertificateClaims.SubjectGivenName, _givenname, ClaimValueTypes.String));
                     }
 
                 }
@@ -112,12 +112,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectTitle))
                     {
-                        _claims[CertificateClaims.SubjectTitle] = new Claim(CertificateClaims.SubjectTitle, _title);
+                        _claims[CertificateClaims.SubjectTitle] = new Claim(CertificateClaims.SubjectTitle, _title, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectTitle, new Claim(CertificateClaims.SubjectTitle, _title));
+                        _claims.Add(CertificateClaims.SubjectTitle, new Claim(CertificateClaims.SubjectTitle, _title, ClaimValueTypes.String));
                     }
 
                 }
@@ -140,12 +140,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectSurname))
                     {
-                        _claims[CertificateClaims.SubjectSurname] = new Claim(CertificateClaims.SubjectSurname, _surname);
+                        _claims[CertificateClaims.SubjectSurname] = new Claim(CertificateClaims.SubjectSurname, _surname, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectSurname, new Claim(CertificateClaims.SubjectSurname, _surname));
+                        _claims.Add(CertificateClaims.SubjectSurname, new Claim(CertificateClaims.SubjectSurname, _surname, ClaimValueTypes.String));
                     }
 
                 }
@@ -167,12 +167,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectOrganisation))
                     {
-                        _claims[CertificateClaims.SubjectOrganisation] = new Claim(CertificateClaims.SubjectOrganisation, _org);
+                        _claims[CertificateClaims.SubjectOrganisation] = new Claim(CertificateClaims.SubjectOrganisation, _org, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectOrganisation, new Claim(CertificateClaims.SubjectOrganisation, _org));
+                        _claims.Add(CertificateClaims.SubjectOrganisation, new Claim(CertificateClaims.SubjectOrganisation, _org, ClaimValueTypes.String));
                     }
 
                 }
@@ -194,12 +194,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectOrganisationUnit))
                     {
-                        _claims[CertificateClaims.SubjectOrganisationUnit] = new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit);
+                        _claims[CertificateClaims.SubjectOrganisationUnit] = new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectOrganisationUnit, new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit));
+                        _claims.Add(CertificateClaims.SubjectOrganisationUnit, new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit, ClaimValueTypes.String));
                     }
 
                 }
@@ -221,12 +221,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectEmail))
                     {
-                        _claims[CertificateClaims.SubjectEmail] = new Claim(CertificateClaims.SubjectEmail, _email);
+                        _claims[CertificateClaims.SubjectEmail] = new Claim(CertificateClaims.SubjectEmail, _email, ClaimValueTypes.Email);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectEmail, new Claim(CertificateClaims.SubjectEmail, _email));
+                        _claims.Add(CertificateClaims.SubjectEmail, new Claim(CertificateClaims.SubjectEmail, _email, ClaimValueTypes.Email));
                     }
 
                 }
@@ -248,12 +248,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectUserid))
                     {
-                        _claims[CertificateClaims.SubjectUserid] = new Claim(CertificateClaims.SubjectUserid, _userID);
+                        _claims[CertificateClaims.SubjectUserid] = new Claim(CertificateClaims.SubjectUserid, _userID, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectUserid, new Claim(CertificateClaims.SubjectUserid, _userID));
+                        _claims.Add(CertificateClaims.SubjectUserid, new Claim(CertificateClaims.SubjectUserid, _userID, ClaimValueTypes.String));
                     }
 
                 }
@@ -275,12 +275,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectLoyality))
                     {
-                        _claims[CertificateClaims.SubjectLoyality] = new Claim(CertificateClaims.SubjectLoyality, _loyality);
+                        _claims[CertificateClaims.SubjectLoyality] = new Claim(CertificateClaims.SubjectLoyality, _loyality, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectLoyality, new Claim(CertificateClaims.SubjectLoyality, _loyality));
+                        _claims.Add(CertificateClaims.SubjectLoyality, new Claim(CertificateClaims.SubjectLoyality, _loyality, ClaimValueTypes.String));
                     }
 
                 }
@@ -302,12 +302,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectInitials))
                     {
-                        _claims[CertificateClaims.SubjectInitials] = new Claim(CertificateClaims.SubjectInitials, _initials);
+                        _claims[CertificateClaims.SubjectInitials] = new Claim(CertificateClaims.SubjectInitials, _initials, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectInitials, new Claim(CertificateClaims.SubjectInitials, _initials));
+                        _claims.Add(CertificateClaims.SubjectInitials, new Claim(CertificateClaims.SubjectInitials, _initials, ClaimValueTypes.String));
                     }
 
                 }
@@ -329,12 +329,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectPostalCode))
                     {
-                        _claims[CertificateClaims.SubjectPostalCode] = new Claim(CertificateClaims.SubjectPostalCode, _postCodes);
+                        _claims[CertificateClaims.SubjectPostalCode] = new Claim(CertificateClaims.SubjectPostalCode, _postCodes, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectPostalCode, new Claim(CertificateClaims.SubjectPostalCode, _postCodes));
+                        _claims.Add(CertificateClaims.SubjectPostalCode, new Claim(CertificateClaims.SubjectPostalCode, _postCodes, ClaimValueTypes.String));
                     }
 
                 }
@@ -356,12 +356,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectStateProvince))
                     {
-                        _claims[CertificateClaims.SubjectStateProvince] = new Claim(CertificateClaims.SubjectStateProvince, _stateProvince);
+                        _claims[CertificateClaims.SubjectStateProvince] = new Claim(CertificateClaims.SubjectStateProvince, _stateProvince, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectStateProvince, new Claim(CertificateClaims.SubjectStateProvince, _stateProvince));
+                        _claims.Add(CertificateClaims.SubjectStateProvince, new Claim(CertificateClaims.SubjectStateProvince, _stateProvince, ClaimValueTypes.String));
                     }
 
                 }
@@ -383,12 +383,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectCountry))
                     {
-                        _claims[CertificateClaims.SubjectCountry] = new Claim(CertificateClaims.SubjectCountry, _country);
+                        _claims[CertificateClaims.SubjectCountry] = new Claim(CertificateClaims.SubjectCountry, _country, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectCountry, new Claim(CertificateClaims.SubjectCountry, _country));
+                        _claims.Add(CertificateClaims.SubjectCountry, new Claim(CertificateClaims.SubjectCountry, _country, ClaimValueTypes.String));
                     }
 
                 }
