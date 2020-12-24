@@ -103,7 +103,7 @@ namespace FrdCoreCrypt
 
             var result = ocspclient.ValidateOCSPx509_2(cert);
 
-            string empi = cert.GetExtentionValue(CertificateOIDS.SubjectAlternativeName); 
+           // string empi = cert.GetExtentionValue(CertificateOIDS.SubjectAlternativeName); 
             foreach (X509Extension extension in cert.Extensions)
             {
                 // Create an AsnEncodedData object using the extensions information.

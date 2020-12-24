@@ -19,42 +19,22 @@ namespace FrdCoreCrypt
     public static  class Helper
     {
         
-        public static string GetExtentionValue(this X509Certificate2 certificate , string oid )
+        public static string GetAuthorityKeyIdentifier(this X509Certificate2 certificate )
         {
 
-            Asn1OctetString ext = certificate.ConvertToBCX509Certificate().GetExtensionValue(new DerObjectIdentifier(oid)) ;
+            Asn1OctetString ext = certificate.ConvertToBCX509Certificate().GetExtensionValue(new DerObjectIdentifier(CertificateOIDS.AuthorityKeyIdentifier)) ;
+
 
             if (ext ==null)
             {
                 return null;
             }
 
-           // Console.WriteLine(Encoding.UTF8.GetString(ext.GetOctets()));
-            //foreach (System.Security.Cryptography.X509Certificates.X509Extension extension in certificate.Extensions)
-            //{
-            //    // Create an AsnEncodedData object using the extensions information.
-            //    AsnEncodedData asndata = new AsnEncodedData(extension.Oid, extension.RawData);
-            //    Console.WriteLine("Extension type: {0}", extension.Oid.FriendlyName);
-            //    Console.WriteLine("Oid value: {0}", asndata.Oid.Value);
-            //    Console.WriteLine("Raw data length: {0} {1}", asndata.RawData.Length, Environment.NewLine);
-            //  //  Console.WriteLine(asndata.Format(true));
+            byte[] octets = ext.GetOctets();  ;
+            AuthorityKeyIdentifier akia = AuthorityKeyIdentifier.GetInstance(octets);
 
-            //    if ( asndata.Oid.Value == oid)
-            //    {
-            //        return asndata.Format(true);
-            //    }
-            string result = Encoding.Default.GetString(ext.GetOctets());
-            Console.WriteLine(result);
-            //}
-            X509Name issuer = X509Name.GetInstance(ext.ToAsn1Object());
-            
-            GeneralName name = new GeneralName(0, ext);
-            result = name.Name.ToString();
-            //DerIA5String.GetInstance()
 
-            // Asn1TaggedObject taggedObject = (Asn1TaggedObject)element[1];
-            // GeneralName gn = (GeneralName)GeneralName.GetInstance();
-            //  ocspUrls.Add(((DerIA5String)DerIA5String.GetInstance(gn.Name)).GetString());
+            string result = BitConverter.ToString(akia.GetKeyIdentifier()).Replace("-", "");
 
             return result;
         }

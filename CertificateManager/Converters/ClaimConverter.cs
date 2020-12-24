@@ -44,7 +44,7 @@ namespace FrdCoreCrypt.Converters
 
             Claim certVTO = new Claim(CertificateClaims.CertificateValidTo, certificate2.NotAfter.ToString());
 
-            string aki = certificate2.GetExtentionValue(CertificateOIDS.AuthorityKeyIdentifier);
+            string aki = certificate2.GetAuthorityKeyIdentifier();
 
             result.AddRange( new Claim[] { ocspResultClaim, ocspResultClaim ,certVFR ,certVTO } );
            
