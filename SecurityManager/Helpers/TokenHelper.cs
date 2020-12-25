@@ -28,16 +28,7 @@ namespace SecurityManager.Helpers
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Convert.FromBase64String(input.Customer.Secret);
 
-            var claims = new List<Claim> {
-                new Claim(ClaimTypes.NameIdentifier, input.NameIdentifier)
-            };
-
-            foreach (var item in input.Claims)
-            {
-                claims.Add(new Claim(item.Key, item.Value));
-            }
-
-            var claimsIdentity = new ClaimsIdentity();
+            var claimsIdentity = new ClaimsIdentity(input.Claims);
             var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(key), input.Customer.SecurityAlgorithm);
 
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -47,9 +38,9 @@ namespace SecurityManager.Helpers
                 Audience = input.Customer.Audience,
                 Expires = DateTime.UtcNow.AddMinutes(input.Customer.Minutes),
                 SigningCredentials = signingCredentials,
-                IssuedAt = DateTime.UtcNow 
+                IssuedAt = DateTime.UtcNow
             };
-            
+
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }

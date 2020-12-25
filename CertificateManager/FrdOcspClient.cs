@@ -273,6 +273,26 @@ namespace FrdCoreCrypt
         }
 
 
+        public bool ValidateCertificateChain(X509Certificate2 cert )
+        {
+            X509Chain chain = new X509Chain();
+            chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
+            chain.Build(cert);
+
+
+            foreach (var item in chain.ChainElements)
+            {
+                if(item.Certificate.Verify() ==false)
+                {
+                    return false; 
+                }
+
+            }
+
+
+            return true; 
+        }
+
         public X509Certificate2 GetIssuerCertificate(X509Certificate2 cert)
         {
             if (cert.Subject == cert.Issuer) { return cert; } //Self Signed Certificate

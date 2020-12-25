@@ -63,7 +63,7 @@ namespace CertAuth
                         //    SecurityAlgorithm = SecurityAlgorithms.HmacSha256Signature
                         //};
 
-                        //var validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
+                        var validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
 
                         //ContainerResult<CertificateLoginOutput> validationServiceResult = await validationService.Login(new CertificateLoginInput
                         //{
@@ -73,19 +73,29 @@ namespace CertAuth
 
                         //  CertManager.ParseExtension(context.ClientCertificate);
 
+                        if (context.ClientCertificate==null)
+                        {
+                            context.Fail("certificate is null ");
+                            return; 
+                        }
+                        var data = validationService.ValidateCertificate(new ValidateCertificateInput { LoginCertificate = context.ClientCertificate });
 
-                        var claimss = new ClaimConverter().GetClaimsFromCertificate(context.ClientCertificate);
+                      //  var claimss = new CertificateClaimConverter().GetClaimsFromCertificate(context.ClientCertificate);
 
-                        var claims = new[]
-                       {
-                            new Claim(ClaimTypes.NameIdentifier, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer),
-                            new Claim(ClaimTypes.Name, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer)
-                        };
-
-                        context.Principal = new ClaimsPrincipal(new ClaimsIdentity(claims, context.Scheme.Name));
+                       // var claims = new[]
+                       //{
+                       //     new Claim(ClaimTypes.NameIdentifier, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer),
+                       //     new Claim(ClaimTypes.Name, context.ClientCertificate.Subject, ClaimValueTypes.String, context.Options.ClaimsIssuer)
+                       // };
+                       if (!data.Result.IsSuccess)
+                        {
+                            context.Fail(data.Result.ErrorList[0].ErrorMessage);
+                            return; 
+                        }
+                        context.Principal = new ClaimsPrincipal(new ClaimsIdentity(data.Result.Output.CertificateClaims, context.Scheme.Name));
 
                         
-                        context.Response.StatusCode= 203;
+                        //context.Response.StatusCode= 200;
 
                         context.Success();
 

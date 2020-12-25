@@ -480,6 +480,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj": {
+                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj"
+              },
               "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj"
               },

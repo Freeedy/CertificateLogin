@@ -1448,6 +1448,7 @@
       "Services/1.0.0": {
         "dependencies": {
           "DataAccess": "1.0.0",
+          "FrdCoreCrypt": "1.0.0",
           "SecurityManager": "1.0.0",
           "log4net": "2.0.12"
         },

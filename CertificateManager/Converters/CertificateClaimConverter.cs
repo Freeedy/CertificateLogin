@@ -17,17 +17,18 @@ using FrdCoreCrypt.Enums;
 
 namespace FrdCoreCrypt.Converters
 {
-    public class ClaimConverter
+    public class CertificateClaimConverter
     {
-        
+
 
         /// <summary>
         /// Convert Dictionary of Claims  to List of Claims 
         /// </summary>
         /// <param name="certificate2"></param>
         /// <returns></returns>
-        public List<Claim> GetClaimsFromCertificate(X509Certificate2 certificate2)
+        public CertificateClaimConverterModel GetClaimsFromCertificate(X509Certificate2 certificate2)
         {
+
             var uniquename = CertManager.GetUniqueName(certificate2);
 
             Claim subjClaim = new Claim(ClaimTypes.NameIdentifier, uniquename.Claims[CertificateClaims.SubjectSerialNumber].Value, ClaimValueTypes.String);
@@ -47,17 +48,28 @@ namespace FrdCoreCrypt.Converters
 
             Claim certVTO = new Claim(CertificateClaims.CertificateValidTo, certificate2.NotAfter.ToString(), ClaimValueTypes.DateTime);
 
+            bool chainstatus = ocspClient.ValidateCertificateChain(certificate2);
+            Claim certChainStatus = new Claim(CertificateClaims.CertificateChainValidation,chainstatus.ToString() , ClaimValueTypes.Boolean);
+
             string aki = certificate2.GetAuthorityKeyIdentifier();
 
-            result.AddRange( new Claim[] { ocspResultClaim, ocspResultClaim ,certVFR ,certVTO } );
-           
-             if (aki!=null)
+            result.AddRange(new Claim[] { ocspResultClaim, ocsptimeClaim, certChainStatus, certVFR, certVTO });
+
+            if (aki != null)
             {
                 result.Add(new Claim(CertificateClaims.CertificateAuthorityKeyIdentifier, aki));
             }
 
 
-            return result;
+            return new CertificateClaimConverterModel
+            {
+                Claims = result,
+                AKI = aki  ,
+                CertificateStatus=ocspresult ,
+                ChainValidationStatus=chainstatus ,
+                ValidFrom=certificate2.NotBefore ,
+                ValidTo =certificate2.NotAfter
+            };
         }
 
 
