@@ -7,3 +7,13 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\o
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\predeploy.sql
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.dll
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.pdb
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.dacpac
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.dll
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.pdb
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.sqlprojAssemblyReference.cache
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\Model.xml
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\refactor.xml
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\postdeploy.sql
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\predeploy.sql
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.dll
+D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.pdb

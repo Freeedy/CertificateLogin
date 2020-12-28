@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2f4VtfHWwPwwuAMDwqJRyndpwUoDszgAD+EDn9E1GuYOEC3mo2zy8fzsy1SrjEWuTJsEActH4mMI/5bZHmtlOA==",
+  "dgSpecHash": "2qFSKIXuAsv6atxwmCtqI/ViTxfQPZUhAsKwMqHJBDv25CipixOtofpCjyQNgP5icvtnRtbYrQ1pfu72j4OrIA==",
   "success": true,
-  "projectFilePath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj",
+  "projectFilePath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\farid\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512"
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512"
   ],
   "logs": [
     {

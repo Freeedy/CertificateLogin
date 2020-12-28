@@ -5,29 +5,21 @@ using BC::Org.BouncyCastle.Asn1.Ocsp;
 using BC::Org.BouncyCastle.Asn1.X509;
 using BC::Org.BouncyCastle.Math;
 using BC::Org.BouncyCastle.Ocsp;
-using BC::Org.BouncyCastle.X509;
-using FrdCoreCrypt;
 using FrdCoreCrypt.Enums;
 using FrdCoreCrypt.Objects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using X509Certificate = BC::Org.BouncyCastle.X509.X509Certificate;
 using X509Extension = BC::Org.BouncyCastle.Asn1.X509.X509Extension;
 
 namespace FrdCoreCrypt
 {
-
     public class FrdOcspClient
     {
-
-
         public static Asn1Object GetExtensionValue(X509Certificate cert, string oid)
         {
             if (cert == null)
@@ -42,15 +34,12 @@ namespace FrdCoreCrypt
                 return null;
             }
 
-            Asn1InputStream aIn = new Asn1InputStream(bytes);
-
-            return aIn.ReadObject();
+            return new Asn1InputStream(bytes).ReadObject();
         }
 
-        public List<string> GetAuthorityInformationAccessOcspUrlx5092(X509Certificate2 cert)
-        {
-            return GetAuthorityInformationAccessOcspUrl(cert.ConvertToBCX509Certificate());
-        }
+        public List<string> GetAuthorityInformationAccessOcspUrlx5092(X509Certificate2 cert) =>
+            GetAuthorityInformationAccessOcspUrl(cert.ConvertToBCX509Certificate());
+
         public List<string> GetAuthorityInformationAccessOcspUrl(X509Certificate cert)
         {
             List<string> ocspUrls = new List<string>();
@@ -63,8 +52,8 @@ namespace FrdCoreCrypt
                 {
                     return null;
                 }
-                Asn1Sequence s = (Asn1Sequence)obj;
-                IEnumerator elements = s.GetEnumerator();
+
+                IEnumerator elements = ((Asn1Sequence)obj).GetEnumerator();
 
                 while (elements.MoveNext())
                 {
@@ -79,38 +68,24 @@ namespace FrdCoreCrypt
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new Exception("Error parsing AIA.", e);
+                throw new Exception("Error parsing AIA.", ex);
             }
 
             return ocspUrls;
         }
 
-
-
-        /// <summary>
-        /// Online Verify  Certificate Status
-        /// </summary>
-        /// <param name="certificate"></param>
-        /// <returns></returns>
-        public CertificateStatusObject ValidateOCSPx509_2(X509Certificate2 certificate)
-        {
-            X509Certificate2 issuer = GetIssuerCertificate(certificate);
-
-            return ValidateOCSPx509_2(certificate, issuer);
-        }
+        public CertificateStatusObject ValidateOCSPx509_2(X509Certificate2 certificate) =>
+            ValidateOCSPx509_2(certificate, GetIssuerCertificate(certificate));
 
         public CertificateStatusObject ValidateOCSPx509_2(X509Certificate2 cert, X509Certificate2 cacert)
-        {
-            return ValidateOCSP(cert.ConvertToBCX509Certificate(), cacert.ConvertToBCX509Certificate());
-        }
-
-
+            => ValidateOCSP(cert.ConvertToBCX509Certificate(), cacert.ConvertToBCX509Certificate());
 
         public CertificateStatusObject ValidateOCSP(X509Certificate cert, X509Certificate cacert)
         {
             List<string> urls = GetAuthorityInformationAccessOcspUrl(cert);
+
             if (urls.Count == 0)
             {
                 throw new Exception("No OCSP url found in ee certificate.");
@@ -119,26 +94,23 @@ namespace FrdCoreCrypt
             string url = urls[0];
             Console.WriteLine("Sending to :  '" + url + "'...");
 
-            byte[] packtosend = CreateOCSPPackage(cert, cacert);
-
-            byte[] response = PostRequest(url, packtosend, "Content-Type", "application/ocsp-request");
-
-            return VerifyResponse(response);
+            return VerifyResponse(PostRequest(url, CreateOCSPPackage(cert, cacert), "Content-Type", "application/ocsp-request"));
         }
 
         public byte[] ToByteArray(Stream stream)
         {
-            byte[] buffer = new byte[4096 * 8];
-            MemoryStream ms = new MemoryStream();
-
-            int read = 0;
-
-            while ((read = stream.Read(buffer, 0, buffer.Length)) > 0)
+            using (MemoryStream ms = new MemoryStream())
             {
-                ms.Write(buffer, 0, read);
-            }
+                byte[] buffer = new byte[4096 * 8];
+                int read;
 
-            return ms.ToArray();
+                while ((read = stream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    ms.Write(buffer, 0, read);
+                }
+
+                return ms.ToArray();
+            }
         }
 
         public byte[] PostRequest(string url, byte[] data, string contentType, string accept)
@@ -148,54 +120,45 @@ namespace FrdCoreCrypt
             request.ContentType = contentType;
             request.ContentLength = data.Length;
             request.Accept = accept;
-            Stream stream = request.GetRequestStream();
-            stream.Write(data, 0, data.Length);
-            stream.Close();
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream respStream = response.GetResponseStream();
-            Console.WriteLine(string.Format("HttpStatusCode : {0}", response.StatusCode.ToString()));
-            byte[] resp = ToByteArray(respStream);
-            respStream.Close();
-
-            return resp;
+            using (Stream stream = request.GetRequestStream())
+            {
+                stream.Write(data, 0, data.Length);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                using (Stream respStream = response.GetResponseStream())
+                {
+                    Console.WriteLine(string.Format("HttpStatusCode : {0}", response.StatusCode.ToString()));
+                    return ToByteArray(respStream);
+                }
+            }
         }
 
         private CertificateStatusObject VerifyResponse(byte[] response)
         {
+            OcspResp ocspResponse = new OcspResp(response);
 
-            CertificateStatusObject result = null;
-            BasicOcspResp or;
-            OcspResp r = new OcspResp(response);
-            
-
-            BC::Org.BouncyCastle.Ocsp.BasicOcspResp rs = r.GetResponseObject() as BasicOcspResp;  
-            //Should parse
-            
             CertificateStatusEnum cStatusEnum = CertificateStatusEnum.Unknown;
-            or = r.GetResponseObject() as BasicOcspResp;
+            BasicOcspResp basicOcspResp = ocspResponse.GetResponseObject() as BasicOcspResp;
 
-            switch (r.Status)
+            switch (ocspResponse.Status)
             {
                 case OcspRespStatus.Successful:
-                    
 
                     //ValidateResponse(or, issuerCert);
-                 //   Console.WriteLine(or.Responses.Length);
-                    if (or.Responses.Length == 1)
+                    //Console.WriteLine(or.Responses.Length);
+                    if (basicOcspResp.Responses.Length == 1)
                     {
-                        SingleResp resp = or.Responses[0];
-                     
-
-                        // ValidateCertificateId(issuerCert, eeCert, resp.GetCertID());
+                        SingleResp resp = basicOcspResp.Responses[0];
+                        //ValidateCertificateId(issuerCert, eeCert, resp.GetCertID());
                         //ValidateThisUpdate(resp);
                         //ValidateNextUpdate(resp);
 
-                        Object certificateStatus = resp.GetCertStatus();
+                        object certificateStatus = resp.GetCertStatus();
 
                         if (certificateStatus == null)
                         {
                             Console.WriteLine("Status is null ! ");
                         }
+
                         if (certificateStatus == null || certificateStatus == BC::Org.BouncyCastle.Ocsp.CertificateStatus.Good)
                         {
                             cStatusEnum = CertificateStatusEnum.Good;
@@ -214,35 +177,32 @@ namespace FrdCoreCrypt
                     }
                     break;
                 default:
-                    throw new Exception("Unknow status '" + r.Status + "'.");
+                    throw new Exception("Unknow status '" + ocspResponse.Status + "'.");
             }
-            if (or !=null )
+            CertificateStatusObject result;
+           
+            if (basicOcspResp != null)
             {
-                result = new CertificateStatusObject(or.ProducedAt, or.SignatureAlgName, cStatusEnum);
+                result = new CertificateStatusObject(basicOcspResp.ProducedAt, basicOcspResp.SignatureAlgName, cStatusEnum);
             }
             else
             {
-                result = new CertificateStatusObject( cStatusEnum);
+                result = new CertificateStatusObject(cStatusEnum);
             }
-            
-            //result = new CertificateStatusObject(or.ProducedAt )
 
+            //result = new CertificateStatusObject(or.ProducedAt )
             return result;
         }
 
-
+        [Obsolete]
         private static byte[] CreateOCSPPackage(X509Certificate cert, X509Certificate cacert)
         {
-            OcspReqGenerator gen = new OcspReqGenerator();
             try
             {
-                CertificateID certId = new CertificateID(CertificateID.HashSha1, cacert, cert.SerialNumber);
-
-                gen.AddRequest(certId);
+                OcspReqGenerator gen = new OcspReqGenerator();
+                gen.AddRequest(new CertificateID(CertificateID.HashSha1, cacert, cert.SerialNumber));
                 gen.SetRequestExtensions(CreateExtension());
-                OcspReq req;
-                req = gen.Generate();
-                return req.GetEncoded();
+                return gen.Generate().GetEncoded();
             }
             catch (OcspException e)
             {
@@ -254,48 +214,42 @@ namespace FrdCoreCrypt
                 Console.WriteLine(e.StackTrace);
             }
             return null;
-
-
         }
 
-        private static X509Extensions CreateExtension()
+        [Obsolete]
+        private static X509Extensions CreateExtension() => new X509Extensions(new Hashtable
         {
-            byte[] nonce = new byte[16];
-            Hashtable exts = new Hashtable();
+            {
+                OcspObjectIdentifiers.PkixOcspNonce,
+                new X509Extension(false, new DerOctetString(BigInteger.ValueOf(DateTime.Now.Ticks).ToByteArray()))
+            }
+        });
 
-            BigInteger nc = BigInteger.ValueOf(DateTime.Now.Ticks);
-            X509Extension nonceext = new X509Extension(false, new DerOctetString(nc.ToByteArray()));
-
-
-            exts.Add(OcspObjectIdentifiers.PkixOcspNonce, nonceext);
-            return new X509Extensions(exts);
-
-        }
-
-
-        public bool ValidateCertificateChain(X509Certificate2 cert )
+        public bool ValidateCertificateChain(X509Certificate2 cert)
         {
             X509Chain chain = new X509Chain();
             chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
             chain.Build(cert);
 
-
-            foreach (var item in chain.ChainElements)
+            foreach (X509ChainElement item in chain.ChainElements)
             {
-                if(item.Certificate.Verify() ==false)
+                if (item.Certificate.Verify() == false)
                 {
-                    return false; 
+                    return false;
                 }
-
             }
 
-
-            return true; 
+            return true;
         }
 
         public X509Certificate2 GetIssuerCertificate(X509Certificate2 cert)
         {
-            if (cert.Subject == cert.Issuer) { return cert; } //Self Signed Certificate
+            if (cert.Subject == cert.Issuer)
+            {
+                return cert;
+            }
+
+            //Self Signed Certificate
             X509Chain chain = new X509Chain();
             chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
             chain.Build(cert);
@@ -307,6 +261,5 @@ namespace FrdCoreCrypt
             chain.Reset();
             return issuer;
         }
-
     }
 }

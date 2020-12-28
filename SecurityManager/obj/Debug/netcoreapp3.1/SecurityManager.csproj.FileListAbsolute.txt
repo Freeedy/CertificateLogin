@@ -7,3 +7,12 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\De
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csproj.CoreCompileInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.dll
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.pdb
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.deps.json
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.dll
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.pdb
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csprojAssemblyReference.cache
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfoInputs.cache
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfo.cs
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csproj.CoreCompileInputs.cache
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.dll
+D:\MHM\Projects\Bitbucket\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.pdb

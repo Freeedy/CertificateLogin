@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FrdCoreCrypt.Objects.Static
+﻿namespace FrdCoreCrypt.Objects.Static
 {
     public class CertificateOIDS
     {
-
         public const string AuthorityKeyIdentifier = "2.5.29.35";
         public const string SubjectKeyIdentifier = "2.5.29.14";
         public const string SubjectAlternativeName = "2.5.29.17";
@@ -16,14 +9,10 @@ namespace FrdCoreCrypt.Objects.Static
         public const string KeyUsage = "2.5.29.15";
         public const string EnhancedKeyUsage = "2.5.29.37";
         public const string CertificatePolicies = "2.5.29.32";
-
-
         public const string AuthorityInformationAccess = "1.3.6.1.5.5.7.1.1";
         public const string CertificateTemplateInformation = "1.3.6.1.4.1.311.21.7";
         public const string ApplicationPolicies = "1.3.6.1.4.1.311.21.10";
-
         public const string OCSP = "1.3.6.1.5.5.7.48.1";
-
 
         public class SubjectOIds
         {
@@ -43,11 +32,6 @@ namespace FrdCoreCrypt.Objects.Static
             public const string UserIdentifierAttr = "UID";
             public const string LoyalityAttr = "L";
             public const string InitialsAttr = "INITIALS";
-
-
-
-
-
             public const string CommonName_OID = "2.5.4.3";
             public const string OrganizationalUnit_OID = "2.5.4.11";
             public const string Organisation_OID = "2.5.4.10";
@@ -62,10 +46,6 @@ namespace FrdCoreCrypt.Objects.Static
             public const string UserIdentifier_OID = "0.9.2342.19200300.100.1.1";
             public const string Loyality_OID = "2.5.4.7";
             public const string Initials_OID = "2.5.4.43";
-
-
-
-
         }
     }
 }

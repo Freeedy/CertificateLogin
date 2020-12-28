@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Models.ServiceParameters.LoginParameters;
 using Services.Services.UserServices;
 using Services.Services.ValidationServices;
 

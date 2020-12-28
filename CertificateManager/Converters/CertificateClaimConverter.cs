@@ -1,16 +1,7 @@
 ﻿extern alias BC;
-
-using BC::Org.BouncyCastle.Asn1;
-using BC::Org.BouncyCastle.X509;
 using FrdCoreCrypt.Objects;
-using FrdCoreCrypt.Objects.Static;
-using FrdCoreCrypt;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using X509Certificate = BC::Org.BouncyCastle.X509.X509Certificate;
 using System.Security.Claims;
 using System.Linq;
 using FrdCoreCrypt.Enums;
@@ -24,56 +15,49 @@ namespace FrdCoreCrypt.Converters
         /// <summary>
         /// Convert Dictionary of Claims  to List of Claims 
         /// </summary>
-        /// <param name="certificate2"></param>
+        /// <param name="certificate"></param>
         /// <returns></returns>
-        public CertificateClaimConverterModel GetClaimsFromCertificate(X509Certificate2 certificate2)
+        public CertificateClaimConverterModel GetClaimsFromCertificate(X509Certificate2 certificate)
         {
 
-            var uniquename = CertManager.GetUniqueName(certificate2);
+            CertSubjectDetails uniquename = CertManager.GetUniqueName(certificate);
 
-            Claim subjClaim = new Claim(ClaimTypes.NameIdentifier, uniquename.Claims[CertificateClaims.SubjectSerialNumber].Value, ClaimValueTypes.String);
-            ///Get subject Claims 
-            List<Claim> result = uniquename.Claims.Values.ToList();
+            List<Claim> claims = uniquename.Claims.Values.ToList();
 
-            result.Add(subjClaim);
+            claims.Add(new Claim(ClaimTypes.NameIdentifier, uniquename.Claims[CertificateClaims.SubjectSerialNumber].Value, ClaimValueTypes.String));
 
             FrdOcspClient ocspClient = new FrdOcspClient();
 
-            var ocspresult = ocspClient.ValidateOCSPx509_2(certificate2);
+            CertificateStatusObject ocspresult = ocspClient.ValidateOCSPx509_2(certificate);
 
             Claim ocsptimeClaim = new Claim(CertificateClaims.CertificateOCSPResultTime, ocspresult.ProducedUTC.ToString(), ClaimValueTypes.DateTime);
             Claim ocspResultClaim = new Claim(CertificateClaims.CertificateOCSPStatus, ocspresult.Status.ToString(), ClaimValueTypes.DateTime);
 
-            Claim certVFR = new Claim(CertificateClaims.CertificateValidFrom, certificate2.NotBefore.ToString(), ClaimValueTypes.DateTime);
+            Claim certVFR = new Claim(CertificateClaims.CertificateValidFrom, certificate.NotBefore.ToString(), ClaimValueTypes.DateTime);
 
-            Claim certVTO = new Claim(CertificateClaims.CertificateValidTo, certificate2.NotAfter.ToString(), ClaimValueTypes.DateTime);
+            Claim certVTO = new Claim(CertificateClaims.CertificateValidTo, certificate.NotAfter.ToString(), ClaimValueTypes.DateTime);
 
-            bool chainstatus = ocspClient.ValidateCertificateChain(certificate2);
-            Claim certChainStatus = new Claim(CertificateClaims.CertificateChainValidation,chainstatus.ToString() , ClaimValueTypes.Boolean);
+            bool chainstatus = ocspClient.ValidateCertificateChain(certificate);
+            Claim certChainStatus = new Claim(CertificateClaims.CertificateChainValidation, chainstatus.ToString(), ClaimValueTypes.Boolean);
 
-            string aki = certificate2.GetAuthorityKeyIdentifier();
+            string aki = certificate.GetAuthorityKeyIdentifier();
 
-            result.AddRange(new Claim[] { ocspResultClaim, ocsptimeClaim, certChainStatus, certVFR, certVTO });
+            claims.AddRange(new Claim[] { ocspResultClaim, ocsptimeClaim, certChainStatus, certVFR, certVTO });
 
             if (aki != null)
             {
-                result.Add(new Claim(CertificateClaims.CertificateAuthorityKeyIdentifier, aki));
+                claims.Add(new Claim(CertificateClaims.CertificateAuthorityKeyIdentifier, aki));
             }
-
 
             return new CertificateClaimConverterModel
             {
-                Claims = result,
-                AKI = aki  ,
-                CertificateStatus=ocspresult ,
-                ChainValidationStatus=chainstatus ,
-                ValidFrom=certificate2.NotBefore ,
-                ValidTo =certificate2.NotAfter
+                Claims = claims,
+                Aki = aki,
+                CertificateStatus = ocspresult,
+                ChainValidationStatus = chainstatus,
+                ValidFrom = certificate.NotBefore,
+                ValidTo = certificate.NotAfter
             };
         }
-
-
-
-
     }
 }

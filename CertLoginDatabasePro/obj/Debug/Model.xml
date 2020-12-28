@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="CertLoginDatabasePro.dll" />
-			<Metadata Name="FileName" Value="D:\WORKPLACES\EID\WORKS\CERTLOGIN\SOURCE\CERTIFICATELOGIN\CERTLOGINDATABASEPRO\OBJ\DEBUG\CERTLOGINDATABASEPRO.DLL" />
+			<Metadata Name="FileName" Value="D:\MHM\PROJECTS\BITBUCKET\CERTLOGIN\CERTLOGINDATABASEPRO\OBJ\DEBUG\CERTLOGINDATABASEPRO.DLL" />
 			<Metadata Name="AssemblyName" Value="CertLoginDatabasePro" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\MHM\Projects\Bitbucket\certlogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

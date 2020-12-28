@@ -5,6 +5,7 @@ using Common.Resources;
 using DataAccess.UnitofWork;
 using FrdCoreCrypt.Converters;
 using FrdCoreCrypt.Enums;
+using FrdCoreCrypt.Objects;
 using Microsoft.IdentityModel.Tokens;
 using Models;
 using Models.Dtos.LoginDtos;
@@ -33,7 +34,7 @@ namespace Services.Services.ValidationServices
                     SecurityAlgorithm = SecurityAlgorithms.HmacSha256Signature
                 };
 
-                TokenHelper tokenHelper = new TokenHelper("CerCenter");
+                TokenHelper tokenHelper = new TokenHelper();
 
                 Result.Output = new CertificateLoginOutput
                 {
@@ -41,6 +42,7 @@ namespace Services.Services.ValidationServices
                     {
                         AccessToken = tokenHelper.GenerateToken(new TokenInput
                         {
+                            Issuer = "NCSCenter",
                             Customer = customer,
                             Claims = input.Claims
                         })
@@ -54,60 +56,55 @@ namespace Services.Services.ValidationServices
 
         public async Task<ContainerResult<ValidateCertificateOutput>> ValidateCertificate(ValidateCertificateInput input)
            => await ExecuteAsync(ConnectionTypes.NONE, async () =>
-           {
-               ContainerResult<ValidateCertificateOutput> Result = new ContainerResult<ValidateCertificateOutput>();
+        {
+            ContainerResult<ValidateCertificateOutput> result = new ContainerResult<ValidateCertificateOutput>();
 
-               CertificateClaimConverter converter = new CertificateClaimConverter();
+            CertificateClaimConverterModel certificateClaimConverterModel = new CertificateClaimConverter()
+            .GetClaimsFromCertificate(input.LoginCertificate);
 
-               var result = converter.GetClaimsFromCertificate(input.LoginCertificate);
+            if (certificateClaimConverterModel.CertificateStatus.Status != CertificateStatusEnum.Good)
+            {
+                result.ErrorList.Add(new Error
+                {
+                    ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
+                });
 
-               if (result.CertificateStatus.Status != CertificateStatusEnum.Good)
-               {
-                   Result.ErrorList.Add(new Error
-                   {
-                       ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
-                   });
+                return result;
+            }
 
-                   return Result;
-               }
+            if (!certificateClaimConverterModel.ChainValidationStatus)
+            {
+                result.ErrorList.Add(new Error
+                {
+                    ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
+                });
 
+                return result;
+            }
 
-               if (!result.ChainValidationStatus )
-               {
-                   Result.ErrorList.Add(new Error
-                   {
-                       ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
-                   });
+            if (!input.LoginCertificate.Verify())
+            {
+                result.ErrorList.Add(new Error
+                {
+                    ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+                    StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
+                });
 
-                   return Result;
-               }
+                return result;
+            }
 
-               if (!input.LoginCertificate.Verify())
-               {
-                   Result.ErrorList.Add(new Error
-                   {
-                       ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
-                   });
+            result.Output = new ValidateCertificateOutput
+            {
+                CertificateClaims = certificateClaimConverterModel.Claims
+            };
 
-                   return Result;
-               }
-
-               Result.Output = new ValidateCertificateOutput
-               {
-                  CertificateClaims=result.Claims 
-               };
-
-              
-
-                await Task.CompletedTask;
-               return Result;
-           });
-
+            await Task.CompletedTask;
+            return result;
+        });
     }
 }

@@ -1,31 +1,41 @@
 ﻿using FrdCoreCrypt.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrdCoreCrypt.Objects
 {
     public class CertSubjectDetails
     {
+        private readonly Dictionary<string, Claim> _claims = new Dictionary<string, Claim>();
+        private string _serialNumber;
+        private string _commonName;
+        private string _givenName;
+        private string _title;
+        private string _surName;
+        private string _organization;
+        private string _organizationUnit;
+        private string _email;
+        private string _userId;
+        private string _loyalty;
+        private string _initial;
+        private string _postCode;
+        private string _stateProvince;
+        private string _country;
 
-        Dictionary<string, Claim> _claims = new Dictionary<string, Claim>();
-        string _serialNUmber, _commonname, _givenname,
-            _title, _surname, _org, _orgUnit, _email,
-            _userID, _loyality, _initials, _postCodes,
-            _stateProvince, _country = null;
-
-
-
+        public Dictionary<string, Claim> Claims
+        {
+            get
+            {
+                return _claims;
+            }
+        }
         public string SerialNumber
         {
-            get { return _serialNUmber; }
+            get { return _serialNumber; }
             set
             {
-                _serialNUmber = value;
-                if (_serialNUmber == null)
+                _serialNumber = value;
+                if (_serialNumber == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectSerialNumber);
                 }
@@ -33,12 +43,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectSerialNumber))
                     {
-                        _claims[CertificateClaims.SubjectSerialNumber] = new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber,ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectSerialNumber] = new Claim(CertificateClaims.SubjectSerialNumber, _serialNumber, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectSerialNumber, new Claim(CertificateClaims.SubjectSerialNumber, _serialNUmber, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectSerialNumber, new Claim(CertificateClaims.SubjectSerialNumber, _serialNumber, ClaimValueTypes.String));
                     }
 
                 }
@@ -47,11 +57,11 @@ namespace FrdCoreCrypt.Objects
         }
         public string CommonName
         {
-            get { return _commonname; }
+            get { return _commonName; }
             set
             {
-                _commonname = value;
-                if (_commonname == null)
+                _commonName = value;
+                if (_commonName == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectCommonName);
                 }
@@ -59,26 +69,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectCommonName))
                     {
-                        _claims[CertificateClaims.SubjectCommonName] = new Claim(CertificateClaims.SubjectCommonName, _commonname, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectCommonName] = new Claim(CertificateClaims.SubjectCommonName, _commonName, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectCommonName, new Claim(CertificateClaims.SubjectCommonName, _commonname, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectCommonName, new Claim(CertificateClaims.SubjectCommonName, _commonName, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
         public string GivenName
         {
-            get { return _givenname; }
+            get { return _givenName; }
             set
             {
-                _givenname = value;
-                if (_givenname == null)
+                _givenName = value;
+                if (_givenName == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectGivenName);
                 }
@@ -86,12 +95,12 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectGivenName))
                     {
-                        _claims[CertificateClaims.SubjectGivenName] = new Claim(CertificateClaims.SubjectGivenName, _givenname, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectGivenName] = new Claim(CertificateClaims.SubjectGivenName, _givenName, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectGivenName, new Claim(CertificateClaims.SubjectGivenName, _givenname, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectGivenName, new Claim(CertificateClaims.SubjectGivenName, _givenName, ClaimValueTypes.String));
                     }
 
                 }
@@ -124,15 +133,13 @@ namespace FrdCoreCrypt.Objects
 
             }
         }
-
-
         public string Surname
         {
-            get { return _surname; }
+            get { return _surName; }
             set
             {
-                _surname = value;
-                if (_surname == null)
+                _surName = value;
+                if (_surName == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectSurname);
                 }
@@ -140,26 +147,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectSurname))
                     {
-                        _claims[CertificateClaims.SubjectSurname] = new Claim(CertificateClaims.SubjectSurname, _surname, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectSurname] = new Claim(CertificateClaims.SubjectSurname, _surName, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectSurname, new Claim(CertificateClaims.SubjectSurname, _surname, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectSurname, new Claim(CertificateClaims.SubjectSurname, _surName, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
-        public string Organisation
+        public string Organization
         {
-            get { return _org; }
+            get { return _organization; }
             set
             {
-                _org = value;
-                if (_org == null)
+                _organization = value;
+                if (_organization == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectOrganisation);
                 }
@@ -167,26 +173,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectOrganisation))
                     {
-                        _claims[CertificateClaims.SubjectOrganisation] = new Claim(CertificateClaims.SubjectOrganisation, _org, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectOrganisation] = new Claim(CertificateClaims.SubjectOrganisation, _organization, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectOrganisation, new Claim(CertificateClaims.SubjectOrganisation, _org, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectOrganisation, new Claim(CertificateClaims.SubjectOrganisation, _organization, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
-        public string OrganisationUnit
+        public string OrganizationUnit
         {
-            get { return _orgUnit; }
+            get { return _organizationUnit; }
             set
             {
-                _orgUnit = value;
-                if (_orgUnit == null)
+                _organizationUnit = value;
+                if (_organizationUnit == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectOrganisationUnit);
                 }
@@ -194,19 +199,18 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectOrganisationUnit))
                     {
-                        _claims[CertificateClaims.SubjectOrganisationUnit] = new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectOrganisationUnit] = new Claim(CertificateClaims.SubjectOrganisationUnit, _organizationUnit, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectOrganisationUnit, new Claim(CertificateClaims.SubjectOrganisationUnit, _orgUnit, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectOrganisationUnit, new Claim(CertificateClaims.SubjectOrganisationUnit, _organizationUnit, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
         public string Email
         {
             get { return _email; }
@@ -233,14 +237,13 @@ namespace FrdCoreCrypt.Objects
 
             }
         }
-
         public string UserId
         {
-            get { return _userID; }
+            get { return _userId; }
             set
             {
-                _userID = value;
-                if (_userID == null)
+                _userId = value;
+                if (_userId == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectUserid);
                 }
@@ -248,26 +251,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectUserid))
                     {
-                        _claims[CertificateClaims.SubjectUserid] = new Claim(CertificateClaims.SubjectUserid, _userID, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectUserid] = new Claim(CertificateClaims.SubjectUserid, _userId, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectUserid, new Claim(CertificateClaims.SubjectUserid, _userID, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectUserid, new Claim(CertificateClaims.SubjectUserid, _userId, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
-        public string Loyality
+        public string Loyalty
         {
-            get { return _loyality; }
+            get { return _loyalty; }
             set
             {
-                _loyality = value;
-                if (_loyality == null)
+                _loyalty = value;
+                if (_loyalty == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectLoyality);
                 }
@@ -275,26 +277,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectLoyality))
                     {
-                        _claims[CertificateClaims.SubjectLoyality] = new Claim(CertificateClaims.SubjectLoyality, _loyality, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectLoyality] = new Claim(CertificateClaims.SubjectLoyality, _loyalty, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectLoyality, new Claim(CertificateClaims.SubjectLoyality, _loyality, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectLoyality, new Claim(CertificateClaims.SubjectLoyality, _loyalty, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
-        public string Initials
+        public string Initial
         {
-            get { return _initials; }
+            get { return _initial; }
             set
             {
-                _initials = value;
-                if (_initials == null)
+                _initial = value;
+                if (_initial == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectInitials);
                 }
@@ -302,26 +303,25 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectInitials))
                     {
-                        _claims[CertificateClaims.SubjectInitials] = new Claim(CertificateClaims.SubjectInitials, _initials, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectInitials] = new Claim(CertificateClaims.SubjectInitials, _initial, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectInitials, new Claim(CertificateClaims.SubjectInitials, _initials, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectInitials, new Claim(CertificateClaims.SubjectInitials, _initial, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
         public string PostalCode
         {
-            get { return _postCodes; }
+            get { return _postCode; }
             set
             {
-                _postCodes = value;
-                if (_postCodes == null)
+                _postCode = value;
+                if (_postCode == null)
                 {
                     _claims.Remove(CertificateClaims.SubjectPostalCode);
                 }
@@ -329,19 +329,18 @@ namespace FrdCoreCrypt.Objects
                 {
                     if (_claims.ContainsKey(CertificateClaims.SubjectPostalCode))
                     {
-                        _claims[CertificateClaims.SubjectPostalCode] = new Claim(CertificateClaims.SubjectPostalCode, _postCodes, ClaimValueTypes.String);
+                        _claims[CertificateClaims.SubjectPostalCode] = new Claim(CertificateClaims.SubjectPostalCode, _postCode, ClaimValueTypes.String);
 
                     }
                     else
                     {
-                        _claims.Add(CertificateClaims.SubjectPostalCode, new Claim(CertificateClaims.SubjectPostalCode, _postCodes, ClaimValueTypes.String));
+                        _claims.Add(CertificateClaims.SubjectPostalCode, new Claim(CertificateClaims.SubjectPostalCode, _postCode, ClaimValueTypes.String));
                     }
 
                 }
 
             }
         }
-
         public string StateProvince
         {
             get { return _stateProvince; }
@@ -368,7 +367,6 @@ namespace FrdCoreCrypt.Objects
 
             }
         }
-
         public string Country
         {
             get { return _country; }
@@ -395,17 +393,5 @@ namespace FrdCoreCrypt.Objects
 
             }
         }
-
-
-        public Dictionary<string, Claim> Claims
-        {
-            get
-            {
-                return _claims;
-            }
-        }
-
-
-
     }
 }
