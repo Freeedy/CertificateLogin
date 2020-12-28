@@ -61,17 +61,17 @@ namespace Services.Services.ValidationServices
 
                var result = converter.GetClaimsFromCertificate(input.LoginCertificate);
 
-               if (result.CertificateStatus.Status != CertificateStatusEnum.Good)
-               {
-                   Result.ErrorList.Add(new Error
-                   {
-                       ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
-                       StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
-                   });
+               //if (result.CertificateStatus.Status != CertificateStatusEnum.Good)
+               //{
+               //    Result.ErrorList.Add(new Error
+               //    {
+               //        ErrorCode = ErrorCodes.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+               //        ErrorMessage = Resource.ORGANIZATION_DOES_NOT_EXIST,//todo add status
+               //        StatusCode = ErrorHttpStatus.NOT_FOUND //todo add status
+               //    });
 
-                   return Result;
-               }
+               //    return Result;
+               //}
 
 
                if (!result.ChainValidationStatus )
