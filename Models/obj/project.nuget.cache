@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s2rc4pNULThXUqjhqX/aJQiLg+wnSo9iTp8p0w7WyJMsfjQHYV520Ox8Z7Gpav/u4GXAIFc48PUbTbHThhOBvw==",
+  "dgSpecHash": "KSJIN6q4FujmbmzqRcxcm9B2FCknKXCE2tJ8kE6DVn1B8OTTrS3qx8FE/tI5YiywzM+Yupp90s4QI+ggtLzwCQ==",
   "success": true,
   "projectFilePath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
-    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.10\\microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.5\\microsoft.extensions.configuration.3.1.5.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.10\\microsoft.extensions.configuration.abstractions.3.1.10.nupkg.sha512",

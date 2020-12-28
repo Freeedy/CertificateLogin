@@ -33,11 +33,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj": {
-                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj"
-              },
               "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj"
+              },
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj"
               },
               "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj": {
                 "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj"
@@ -83,72 +83,6 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj",
-        "projectName": "FrdCoreCrypt",
-        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj",
-        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
-        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "BouncyCastle": {
-              "target": "Package",
-              "version": "[1.8.6.1, )",
-              "aliases": "BC"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -314,6 +248,72 @@
         }
       }
     },
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj",
+        "projectName": "FrdCoreCrypt",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.6.1, )",
+              "aliases": "BC"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -432,7 +432,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -486,11 +486,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj": {
-                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertificateManager\\FrdCoreCrypt.csproj"
-              },
               "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj"
+              },
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj"
               },
               "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj": {
                 "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj"

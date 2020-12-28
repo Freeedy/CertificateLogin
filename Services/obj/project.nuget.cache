@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+yi8lJtOlwGHLkfdGD0G5jd2XZDq/yu+v3Q0UBJlA/rHcaLOZEenY28YoJv+FVPmtBG7nG4U1+ZU1bQmvnJmmw==",
+  "dgSpecHash": "1D5mlGxp9tnKKMbzeDWsC5PMkswL9Za8l8wXYjCx8gSerz0PlCuCarWBEc2eUQUJLEqa0NuPFxY/y/UPWqXacw==",
   "success": true,
   "projectFilePath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
-    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.10\\microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

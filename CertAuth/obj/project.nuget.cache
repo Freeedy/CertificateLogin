@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1rV56cO0eO3werMLs+B0uAJhmQksCCAPTzxxJbxf/0Y+3JrOlcsniIN03P8MHQsSB6tKepWQMfxot+oqVEuNmg==",
+  "dgSpecHash": "rodQymyUaun0OJreGaxjYwTIjlMTmjSpjPcGHkQgmFX1BNQvoD5h4xKB1WZfKOVztePOpdZzFGrF5MLaXkZvTQ==",
   "success": true,
   "projectFilePath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertAuth\\CertAuth.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\3.1.9\\microsoft.aspnetcore.authentication.certificate.3.1.9.nupkg.sha512",
-    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.10\\microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\emin.aliyev\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
