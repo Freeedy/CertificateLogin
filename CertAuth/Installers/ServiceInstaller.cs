@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.Services.UserServices;
-using Services.Services.ValidationServices;
+using Services.Services.CertificateValidationServices;
+using SecurityManager.Helpers;
+using FrdCoreCrypt.Converters;
 
 namespace CertAuth.Installers
 {
@@ -12,6 +14,8 @@ namespace CertAuth.Installers
 			services.AddSingleton(configuration);
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ICertificateValidationService, CertificateValidationService>();
+            services.AddTransient<ITokenHelper, TokenHelper>();
+            services.AddTransient<ICertificateClaimConverter, CertificateClaimConverter>();
         }
 	}
 }

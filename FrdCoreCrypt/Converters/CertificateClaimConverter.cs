@@ -8,15 +8,9 @@ using FrdCoreCrypt.Enums;
 
 namespace FrdCoreCrypt.Converters
 {
-    public class CertificateClaimConverter
+    public class CertificateClaimConverter : ICertificateClaimConverter
     {
 
-
-        /// <summary>
-        /// Convert Dictionary of Claims  to List of Claims 
-        /// </summary>
-        /// <param name="certificate"></param>
-        /// <returns></returns>
         public CertificateClaimConverterModel GetClaimsFromCertificate(X509Certificate2 certificate)
         {
 

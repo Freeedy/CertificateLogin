@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Models;
 using Models.ServiceParameters.LoginParameters;
-using Services.Services.ValidationServices;
+using Services.Services.CertificateValidationServices;
 
 namespace CertAuth
 {
@@ -17,21 +17,13 @@ namespace CertAuth
 
         public IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.InstallServicesAssembly(Configuration);
-            services.AddAuthentication(
-
-                CertificateAuthenticationDefaults.AuthenticationScheme
-                )
-
-
+            services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme)
             .AddCertificate(options =>
             {
                 options.AllowedCertificateTypes = CertificateTypes.Chained;
@@ -39,16 +31,17 @@ namespace CertAuth
                 {
                     OnCertificateValidated = async (context) =>
                     {
-                        ICertificateValidationService validationService = context.HttpContext.RequestServices.GetService<ICertificateValidationService>();
-
                         if (context.ClientCertificate == null)
                         {
                             context.Fail("Certificate is null");
                             return;
                         }
 
-                        ContainerResult<ValidateCertificateOutput> data = 
-                        await validationService.ValidateCertificate(new ValidateCertificateInput { LoginCertificate = context.ClientCertificate });
+                        ContainerResult<ValidateCertificateOutput> data = await context.HttpContext.RequestServices
+                        .GetService<ICertificateValidationService>().ValidateCertificate(new ValidateCertificateInput
+                        {
+                            LoginCertificate = context.ClientCertificate
+                        });
 
                         if (!data.IsSuccess)
                         {
@@ -62,7 +55,6 @@ namespace CertAuth
                 };
             });
         }
-
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

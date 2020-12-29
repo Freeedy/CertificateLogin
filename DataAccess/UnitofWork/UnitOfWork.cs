@@ -1,5 +1,6 @@
 ﻿using DataAccess.Repositories.UserRepository;
 using DataAccess.Database;
+using DataAccess.Repositories.CustomerRepository;
 
 namespace DataAccess.UnitofWork
 {
@@ -10,9 +11,11 @@ namespace DataAccess.UnitofWork
 
         // Repositories
         private IUserRepository userRepository;
+        private ICustomerRepository customerRepository;
 
         // Repositories props
         public IUserRepository UserRepository() => userRepository ??= new UserRepository(_dbContext);
+        public ICustomerRepository CustomerRepository() => customerRepository ??= new CustomerRepository(_dbContext);
 
         public UnitOfWork(DapperDbContext dbContext) => _dbContext = dbContext;
 
@@ -29,6 +32,7 @@ namespace DataAccess.UnitofWork
         private void ResetRepositories()
         {
             userRepository = null;
+            customerRepository = null;
         }
 
         #region Disposable Members

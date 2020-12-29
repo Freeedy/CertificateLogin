@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.ServiceParameters.LoginParameters;
-using Services.Services.ValidationServices;
+using Services.Services.CertificateValidationServices;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CertAuth.Controllers
@@ -17,11 +18,11 @@ namespace CertAuth.Controllers
 
         [HttpGet]
         [Authorize]
-        [Route("login/{origin}")]
+        [Route("login")]
         public async Task<IActionResult> Login(string origin) => Result(await _certificateValidationService.Login(new CertificateLoginInput
         {
             Origin = origin,
-            Claims = Request.HttpContext.User.Claims
+            Claims = Request.HttpContext.User.Claims.ToList()
         }));
     }
 }

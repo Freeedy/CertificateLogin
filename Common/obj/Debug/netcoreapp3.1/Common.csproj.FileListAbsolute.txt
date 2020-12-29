@@ -20,3 +20,14 @@ D:\MHM\Projects\Bitbucket\certlogin\Common\obj\Debug\netcoreapp3.1\Common.csproj
 D:\MHM\Projects\Bitbucket\certlogin\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\MHM\Projects\Bitbucket\certlogin\Common\obj\Debug\netcoreapp3.1\Common.pdb
 D:\MHM\Projects\Bitbucket\certlogin\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\certlogin\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\Owner\Desktop\certlogin\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\Owner\Desktop\certlogin\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.Resources.Resource.resources
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.csproj.GenerateResource.cache
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\Owner\Desktop\certlogin\Common\obj\Debug\netcoreapp3.1\Common.pdb
