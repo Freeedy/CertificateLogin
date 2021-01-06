@@ -2,6 +2,7 @@
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Microsoft.Extensions.Hosting;
 
@@ -45,6 +46,7 @@ namespace CertAuth
                           //}
                       };
                       listenOptions.UseHttps(httpsConnectionAdapterOptions);
+                      listenOptions.Protocols = HttpProtocols.Http1;
                   });
               }
                   );
