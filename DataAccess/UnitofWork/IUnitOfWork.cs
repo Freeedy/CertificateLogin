@@ -1,4 +1,5 @@
 ﻿using System;
+using DataAccess.Repositories.CustomerRepository;
 using DataAccess.Repositories.UserRepository;
 
 namespace DataAccess.UnitofWork
@@ -7,6 +8,7 @@ namespace DataAccess.UnitofWork
     {
         // Repositories
         IUserRepository UserRepository();
+        ICustomerRepository CustomerRepository();
 
         // Operations
         void Commit();

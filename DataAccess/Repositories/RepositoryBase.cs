@@ -26,7 +26,7 @@ namespace DataAccess.Repositories
             PropertyInfo[] properties = input.GetType().GetProperties();
             for (int i = 0; i < properties.Length; i++)
             {
-                parameters.Add($"@{properties[i].Name}", properties[i].GetValue(input));
+                parameters.Add(properties[i].Name, properties[i].GetValue(input));
             }
             return parameters;
         }
@@ -40,6 +40,10 @@ namespace DataAccess.Repositories
 
         protected async Task ExecuteAsync(string procedureName, RepositoryInputDto input = null) =>
             await _dbContext.DbConnection.ExecuteAsync(procedureName, FillParameters(input),
+                commandType: CommandType.StoredProcedure, transaction: _dbContext.DbTransaction);
+
+        protected async Task ExecuteAsync(string procedureName, object input, string inputName) =>
+            await _dbContext.DbConnection.ExecuteAsync(procedureName, FillParameters(input, inputName),
                 commandType: CommandType.StoredProcedure, transaction: _dbContext.DbTransaction);
 
         protected async Task<object> ExecuteScalarAsync(string procedureName, RepositoryInputDto input = null)
@@ -61,7 +65,7 @@ namespace DataAccess.Repositories
                _dbContext.DbTransaction, commandTimeout, CommandType.StoredProcedure);
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TReturn>(string procedureName,
-            RepositoryInputDto input = null, int? commandTimeout = null) => 
+            RepositoryInputDto input = null, int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync<TReturn>(procedureName, FillParameters(input),
                 _dbContext.DbTransaction, commandTimeout, CommandType.StoredProcedure);
 
@@ -72,7 +76,7 @@ namespace DataAccess.Repositories
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TFirst, TSecond, TReturn>
             (string procedureName, Func<TFirst, TSecond, TReturn> map,
-            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) => 
+            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync(procedureName,
                  map, FillParameters(input), _dbContext.DbTransaction, true,
                  splitOn, commandTimeout, CommandType.StoredProcedure);
@@ -100,7 +104,7 @@ namespace DataAccess.Repositories
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TFirst, TSecond, TThird, TFourth, TReturn>
             (string procedureName, Func<TFirst, TSecond, TThird, TFourth, TReturn> map,
-            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) => 
+            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync(procedureName,
                  map, FillParameters(input), _dbContext.DbTransaction, true,
                  splitOn, commandTimeout, CommandType.StoredProcedure);
@@ -114,7 +118,7 @@ namespace DataAccess.Repositories
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TFirst, TSecond, TThird, TFourth, TFifth, TReturn>
             (string procedureName, Func<TFirst, TSecond, TThird, TFourth, TFifth, TReturn> map,
-            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) => 
+            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync(procedureName,
                  map, FillParameters(input), _dbContext.DbTransaction, true,
                  splitOn, commandTimeout, CommandType.StoredProcedure);
@@ -128,7 +132,7 @@ namespace DataAccess.Repositories
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn>
             (string procedureName, Func<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn> map,
-            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) => 
+            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync(procedureName,
                  map, FillParameters(input), _dbContext.DbTransaction, true,
                  splitOn, commandTimeout, CommandType.StoredProcedure);
@@ -142,7 +146,7 @@ namespace DataAccess.Repositories
 
         protected async Task<IEnumerable<TReturn>> QueryAsync<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn>
             (string procedureName, Func<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn> map,
-            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) => 
+            RepositoryInputDto input = null, string splitOn = "Id", int? commandTimeout = null) =>
             await _dbContext.DbConnection.QueryAsync(procedureName,
                  map, FillParameters(input), _dbContext.DbTransaction, true,
                  splitOn, commandTimeout, CommandType.StoredProcedure);

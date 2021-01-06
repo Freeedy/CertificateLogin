@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CertificateManager\FrdCoreCrypt.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\FrdCoreCrypt\FrdCoreCrypt.csproj" />
     <ProjectReference Include="..\SecurityManager\SecurityManager.csproj" />
   </ItemGroup>
 

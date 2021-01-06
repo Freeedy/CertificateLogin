@@ -1,89 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj": {}
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj": {}
   },
   "projects": {
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj": {
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj",
-        "projectName": "FrdCoreCrypt",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "BouncyCastle": {
-              "target": "Package",
-              "version": "[1.8.6.1, )",
-              "aliases": "BC"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\obj\\",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -92,11 +27,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -108,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -141,25 +77,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj": {
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\obj\\",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -168,14 +104,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj"
               }
             }
           }
@@ -188,6 +124,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -220,25 +157,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj": {
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\obj\\",
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj",
+        "projectName": "FrdCoreCrypt",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -247,17 +184,83 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.6.1, )",
+              "aliases": "BC"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Common\\Common.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\Common.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Common\\Common.csproj"
               },
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj"
               }
             }
           }
@@ -270,6 +273,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -294,25 +298,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj": {
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj",
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj",
         "projectName": "SecurityManager",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\obj\\",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -321,11 +325,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -337,10 +341,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -361,25 +366,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj": {
+    "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\obj\\",
+        "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+        "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -388,20 +393,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Dev\\Github\\NUgetSource": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertificateManager\\FrdCoreCrypt.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj"
               },
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj"
               },
-              "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj": {
-                "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\SecurityManager\\SecurityManager.csproj"
+              "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj": {
+                "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\SecurityManager\\SecurityManager.csproj"
               }
             }
           }
@@ -414,6 +419,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "log4net": {
               "target": "Package",
@@ -438,7 +444,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

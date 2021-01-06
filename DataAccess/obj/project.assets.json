@@ -23,16 +23,16 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.10": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -1455,7 +1455,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.10"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.0.0"
         },
         "compile": {
           "bin/placeholder/SecurityManager.dll": {}
@@ -1503,18 +1503,16 @@
         "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.10": {
-      "sha512": "0FwXX6sTTXBq+ZajtT9VSNNFfmzsFL7Jiy4Qj4qT5qBbUPry26V2rh8QMWn52J2+81q9u7Bm0YKfsClu22VTMA==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.0.0": {
+      "sha512": "FrlxgBG6+FKlYr1IVxXNXSK7jpxiIYf036VNR1UgopKSIUNjaK2zvkhfVgFZVavagitQ/+UZ8Snnm6axyAVRNg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.10",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -2260,7 +2258,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -5465,25 +5463,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\farid\\.nuget\\packages\\": {},
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\obj\\",
+      "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+      "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -5492,14 +5490,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\Dev\\Github\\NUgetSource": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj": {
-              "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Models\\Models.csproj"
+            "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj": {
+              "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Models\\Models.csproj"
             }
           }
         }
@@ -5512,6 +5510,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -5544,7 +5543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,48 +1,30 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using SecurityManager.Models;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 
 namespace SecurityManager.Helpers
 {
-    public class TokenHelper
+    public class TokenHelper : ITokenHelper
     {
-        private readonly string _issuer;
-
-        public TokenHelper(string issuer)
-        {
-            _issuer = issuer;
-        }
-
-        public string GenerateSecureSecret()
-        {
-            var hmac = new HMACSHA256();
-            return Convert.ToBase64String(hmac.Key);
-        }
+        public string GenerateSecureSecret() => Convert.ToBase64String(new HMACSHA256().Key);
 
         public string GenerateToken(TokenInput input)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Convert.FromBase64String(input.Customer.Secret);
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
-            var claimsIdentity = new ClaimsIdentity(input.Claims);
-            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(key), input.Customer.SecurityAlgorithm);
-
-            var tokenDescriptor = new SecurityTokenDescriptor
+            return tokenHandler.WriteToken(tokenHandler.CreateToken(new SecurityTokenDescriptor
             {
-                Subject = claimsIdentity,
-                Issuer = _issuer,
+                Subject = new ClaimsIdentity(input.Claims),
+                Issuer = input.Issuer,
                 Audience = input.Customer.Audience,
                 Expires = DateTime.UtcNow.AddMinutes(input.Customer.Minutes),
-                SigningCredentials = signingCredentials,
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Convert.FromBase64String(input.Customer.Secret)),
+                input.Customer.SecurityAlgorithm),
                 IssuedAt = DateTime.UtcNow
-            };
-
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            }));
         }
     }
 }

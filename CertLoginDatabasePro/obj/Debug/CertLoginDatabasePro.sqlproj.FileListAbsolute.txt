@@ -1,9 +1,0 @@
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.dacpac
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.dll
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\bin\Debug\CertLoginDatabasePro.pdb
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\Model.xml
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\refactor.xml
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\postdeploy.sql
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\predeploy.sql
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.dll
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\CertLoginDatabasePro\obj\Debug\CertLoginDatabasePro.pdb

@@ -70,47 +70,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account does not exist.
-        /// </summary>
-        public static string ACCOUNT_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("ACCOUNT_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Active.
         /// </summary>
         public static string ACTIVE {
             get {
                 return ResourceManager.GetString("ACTIVE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Amount.
-        /// </summary>
-        public static string AMOUNT {
-            get {
-                return ResourceManager.GetString("AMOUNT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Application does not exist.
-        /// </summary>
-        public static string APPLICATION_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("APPLICATION_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Application person does not exist.
-        /// </summary>
-        public static string APPLICATION_PERSON_DOES_NOT_EXISTS {
-            get {
-                return ResourceManager.GetString("APPLICATION_PERSON_DOES_NOT_EXISTS", resourceCulture);
             }
         }
         
@@ -124,51 +88,6 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Branch code.
-        /// </summary>
-        public static string BRANCH_CODE {
-            get {
-                return ResourceManager.GetString("BRANCH_CODE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch code is exist.
-        /// </summary>
-        public static string BRANCH_CODE_İS_EXİST {
-            get {
-                return ResourceManager.GetString("BRANCH_CODE_İS_EXİST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch is not correspond with organization.
-        /// </summary>
-        public static string BRANCH_IS_NOT_CORRESPOND_WITH_ORGANIZATION {
-            get {
-                return ResourceManager.GetString("BRANCH_IS_NOT_CORRESPOND_WITH_ORGANIZATION", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch is not exist.
-        /// </summary>
-        public static string BRANCH_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("BRANCH_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot signed.
-        /// </summary>
-        public static string CANNOT_SIGNED {
-            get {
-                return ResourceManager.GetString("CANNOT_SIGNED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cerificate data not available.
         /// </summary>
         public static string CERTIFICATE_DATA_NOT_AVAILABLE {
@@ -178,29 +97,29 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Certificate services is not responding.
+        ///   Looks up a localized string similar to Certificate status is not good.
         /// </summary>
-        public static string CERTIFICATE_SERVICES_IS_NOT_RESPONDING {
+        public static string CERTIFICATE_STATUS_IS_NOT_GOOD {
             get {
-                return ResourceManager.GetString("CERTIFICATE_SERVICES_IS_NOT_RESPONDING", resourceCulture);
+                return ResourceManager.GetString("CERTIFICATE_STATUS_IS_NOT_GOOD", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Certificates are not create.
+        ///   Looks up a localized string similar to Chain validation status is not good.
         /// </summary>
-        public static string CERTIFICATES_ARE_NOT_CREATE {
+        public static string CHAIN_VALIDATION_STATUS_IS_NOT_GOOD {
             get {
-                return ResourceManager.GetString("CERTIFICATES_ARE_NOT_CREATE", resourceCulture);
+                return ResourceManager.GetString("CHAIN_VALIDATION_STATUS_IS_NOT_GOOD", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Citizenship does not exist.
+        ///   Looks up a localized string similar to Claims are empty.
         /// </summary>
-        public static string CITIZENSHIP_DOES_NOT_EXIST {
+        public static string CLAIMS_ARE_EMPTY {
             get {
-                return ResourceManager.GetString("CITIZENSHIP_DOES_NOT_EXIST", resourceCulture);
+                return ResourceManager.GetString("CLAIMS_ARE_EMPTY", resourceCulture);
             }
         }
         
@@ -223,65 +142,20 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact number.
+        ///   Looks up a localized string similar to Customer does not exist.
         /// </summary>
-        public static string CONTACT_NUMBER {
+        public static string CUSTOMER_DOES_NOT_EXIST {
             get {
-                return ResourceManager.GetString("CONTACT_NUMBER", resourceCulture);
+                return ResourceManager.GetString("CUSTOMER_DOES_NOT_EXIST", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contract file does not exist.
+        ///   Looks up a localized string similar to Customer is blocked.
         /// </summary>
-        public static string CONTRACT_FILE_DOES_NOT_EXIST {
+        public static string CUSTOMER_IS_BLOCKED {
             get {
-                return ResourceManager.GetString("CONTRACT_FILE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contract file is exist.
-        /// </summary>
-        public static string CONTRACT_FILE_IS_EXIST {
-            get {
-                return ResourceManager.GetString("CONTRACT_FILE_IS_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contract file type does not exist.
-        /// </summary>
-        public static string CONTRACT_FILE_TYPE_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("CONTRACT_FILE_TYPE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contract is not exist.
-        /// </summary>
-        public static string CONTRACT_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("CONTRACT_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contract status does not exist.
-        /// </summary>
-        public static string CONTRACT_STATUS_DOES_NOT_EXİST {
-            get {
-                return ResourceManager.GetString("CONTRACT_STATUS_DOES_NOT_EXİST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Currency Id.
-        /// </summary>
-        public static string CURRENCY_ID {
-            get {
-                return ResourceManager.GetString("CURRENCY_ID", resourceCulture);
+                return ResourceManager.GetString("CUSTOMER_IS_BLOCKED", resourceCulture);
             }
         }
         
@@ -300,15 +174,6 @@ namespace Common.Resources {
         public static string DATE_TO {
             get {
                 return ResourceManager.GetString("DATE_TO", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delivery Address.
-        /// </summary>
-        public static string DELIVERY_ADDRESS {
-            get {
-                return ResourceManager.GetString("DELIVERY_ADDRESS", resourceCulture);
             }
         }
         
@@ -349,96 +214,6 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Document type is not exist.
-        /// </summary>
-        public static string DOCUMENT_TYPE_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("DOCUMENT_TYPE_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email.
-        /// </summary>
-        public static string EMAİL {
-            get {
-                return ResourceManager.GetString("EMAİL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email is exist.
-        /// </summary>
-        public static string EMAIL_IS_EXIST {
-            get {
-                return ResourceManager.GetString("EMAIL_IS_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email format is not valid.
-        /// </summary>
-        public static string EMAIL_IS_NOT_VALID {
-            get {
-                return ResourceManager.GetString("EMAIL_IS_NOT_VALID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to External date.
-        /// </summary>
-        public static string EXTERNAL_DATE {
-            get {
-                return ResourceManager.GetString("EXTERNAL_DATE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to External transaction Id.
-        /// </summary>
-        public static string EXTERNAL_TRANSACTION_ID {
-            get {
-                return ResourceManager.GetString("EXTERNAL_TRANSACTION_ID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Female.
-        /// </summary>
-        public static string FEMALE {
-            get {
-                return ResourceManager.GetString("FEMALE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Photo or fingerprint can not saved.
-        /// </summary>
-        public static string FILE_CANNOT_SAVED {
-            get {
-                return ResourceManager.GetString("FILE_CANNOT_SAVED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File name.
-        /// </summary>
-        public static string FILENAME {
-            get {
-                return ResourceManager.GetString("FILENAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fingerprint photo was not found.
-        /// </summary>
-        public static string FINGERPRINT_PHOTO_WAS_NOT_FOUND {
-            get {
-                return ResourceManager.GetString("FINGERPRINT_PHOTO_WAS_NOT_FOUND", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} must be greater than {1}.
         /// </summary>
         public static string GREATER_THAN {
@@ -475,51 +250,6 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Image not found.
-        /// </summary>
-        public static string IMAGE_NOT_FOUND {
-            get {
-                return ResourceManager.GetString("IMAGE_NOT_FOUND", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to OTP Code for reseting password is incorect or expired.
-        /// </summary>
-        public static string INCORRECT_OR_EXPIRED_OTP_CODE {
-            get {
-                return ResourceManager.GetString("INCORRECT_OR_EXPIRED_OTP_CODE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Password is incorrect.
-        /// </summary>
-        public static string INCORRECT_PASSWORD {
-            get {
-                return ResourceManager.GetString("INCORRECT_PASSWORD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Information.
-        /// </summary>
-        public static string INFO {
-            get {
-                return ResourceManager.GetString("INFO", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Insufficient funds.
-        /// </summary>
-        public static string INSUFFICIENT_FUNDS {
-            get {
-                return ResourceManager.GetString("INSUFFICIENT_FUNDS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Internal error.
         /// </summary>
         public static string INTERNAL_ERROR {
@@ -538,24 +268,6 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File count should be maximum {0}..
-        /// </summary>
-        public static string INVALID_FILE_COUNT {
-            get {
-                return ResourceManager.GetString("INVALID_FILE_COUNT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The selected document cannot be an edoc file..
-        /// </summary>
-        public static string INVALID_FILETYPE {
-            get {
-                return ResourceManager.GetString("INVALID_FILETYPE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Input is invalid.
         /// </summary>
         public static string INVALID_INPUT {
@@ -565,119 +277,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min transaction must be less than {0}.
-        /// </summary>
-        public static string INVALID_MAX_TRANSACTION {
-            get {
-                return ResourceManager.GetString("INVALID_MAX_TRANSACTION", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Min transaction must be more than {0}.
-        /// </summary>
-        public static string INVALID_MIN_TRANSACTION {
-            get {
-                return ResourceManager.GetString("INVALID_MIN_TRANSACTION", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You have exceeded the monthly Limit which is more than  {}.
-        /// </summary>
-        public static string INVALID_MONTHLY_LIMIT {
-            get {
-                return ResourceManager.GetString("INVALID_MONTHLY_LIMIT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You have exceeded the monthly Sum which is more than  {}.
-        /// </summary>
-        public static string INVALID_MONTHLY_SUM {
-            get {
-                return ResourceManager.GetString("INVALID_MONTHLY_SUM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Number format is not valid.
-        /// </summary>
-        public static string INVALID_NUMBER_FORMAT {
-            get {
-                return ResourceManager.GetString("INVALID_NUMBER_FORMAT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} is invalid.
         /// </summary>
         public static string INVALID_PIN {
             get {
                 return ResourceManager.GetString("INVALID_PIN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} is invalid.
-        /// </summary>
-        public static string INVALID_PINCODE {
-            get {
-                return ResourceManager.GetString("INVALID_PINCODE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invoice account does not exist.
-        /// </summary>
-        public static string INVOICE_ACCOUNT_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("INVOICE_ACCOUNT_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invoice does not exist.
-        /// </summary>
-        public static string INVOICE_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("INVOICE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invoice was expired.
-        /// </summary>
-        public static string INVOICE_EXPIRED {
-            get {
-                return ResourceManager.GetString("INVOICE_EXPIRED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invoice Id.
-        /// </summary>
-        public static string INVOICE_ID {
-            get {
-                return ResourceManager.GetString("INVOICE_ID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invoice already paid out.
-        /// </summary>
-        public static string INVOICE_PAID_OUT {
-            get {
-                return ResourceManager.GetString("INVOICE_PAID_OUT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ip is not allowed for operation.
-        /// </summary>
-        public static string IPADDRESS_IS_NOT_ALLOWED {
-            get {
-                return ResourceManager.GetString("IPADDRESS_IS_NOT_ALLOWED", resourceCulture);
             }
         }
         
@@ -772,29 +376,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Level is not exist.
+        ///   Looks up a localized string similar to Login certificate verification is not good.
         /// </summary>
-        public static string LEVEL_IS_NOT_EXIST {
+        public static string LOGIN_CERTIFICATE_VERIFICATION_IS_NOT_GOOD {
             get {
-                return ResourceManager.GetString("LEVEL_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Login.
-        /// </summary>
-        public static string LOGIN {
-            get {
-                return ResourceManager.GetString("LOGIN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Login and password doesn&apos;t match.
-        /// </summary>
-        public static string LOGIN_AND_PASSWORD_DOESNT_MATCH {
-            get {
-                return ResourceManager.GetString("LOGIN_AND_PASSWORD_DOESNT_MATCH", resourceCulture);
+                return ResourceManager.GetString("LOGIN_CERTIFICATE_VERIFICATION_IS_NOT_GOOD", resourceCulture);
             }
         }
         
@@ -808,38 +394,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Male.
-        /// </summary>
-        public static string MALE {
-            get {
-                return ResourceManager.GetString("MALE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} maximum length can be {1}.
         /// </summary>
         public static string MAXIMUMLENGTH {
             get {
                 return ResourceManager.GetString("MAXIMUMLENGTH", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Merchant setting does not exist.
-        /// </summary>
-        public static string MERCHANT_SETTING_DOES_NOT_EXISTS {
-            get {
-                return ResourceManager.GetString("MERCHANT_SETTING_DOES_NOT_EXISTS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mime type is not multipart/form-data.
-        /// </summary>
-        public static string MIMETYPE_IS_NOT_MULTIPART {
-            get {
-                return ResourceManager.GetString("MIMETYPE_IS_NOT_MULTIPART", resourceCulture);
             }
         }
         
@@ -862,38 +421,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No verifcation key required.
-        /// </summary>
-        public static string NO_VERIFCATION_KEY_REQUIRED {
-            get {
-                return ResourceManager.GetString("NO_VERIFCATION_KEY_REQUIRED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} can not be empty.
         /// </summary>
         public static string NOTEMPTY {
             get {
                 return ResourceManager.GetString("NOTEMPTY", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Old password.
-        /// </summary>
-        public static string OLD_PASSWORD {
-            get {
-                return ResourceManager.GetString("OLD_PASSWORD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Operation type is not exist.
-        /// </summary>
-        public static string OPERATION_TYPE_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("OPERATION_TYPE_IS_NOT_EXIST", resourceCulture);
             }
         }
         
@@ -907,6 +439,15 @@ namespace Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Organization is blocked.
+        /// </summary>
+        public static string ORGANIZATION_IS_BLOCKED {
+            get {
+                return ResourceManager.GetString("ORGANIZATION_IS_BLOCKED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Organization name is exist.
         /// </summary>
         public static string ORGANIZATION_NAME_IS_EXIST {
@@ -916,254 +457,20 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to Origin is empty.
         /// </summary>
-        public static string PASSWORD {
+        public static string ORIGIN_IS_EMPTY {
             get {
-                return ResourceManager.GetString("PASSWORD", resourceCulture);
+                return ResourceManager.GetString("ORIGIN_IS_EMPTY", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password and confirm password must be same.
+        ///   Looks up a localized string similar to SubOrganization is blocked.
         /// </summary>
-        public static string PASSWORDS_MUST_BE_SAME {
+        public static string SUB_ORGANIZATION_IS_BLOCKED {
             get {
-                return ResourceManager.GetString("PASSWORDS_MUST_BE_SAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payer account does not exist.
-        /// </summary>
-        public static string PAYER_ACCOUNT_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("PAYER_ACCOUNT_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payment does not exist.
-        /// </summary>
-        public static string PAYMENT_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("PAYMENT_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payment does not payed.
-        /// </summary>
-        public static string PAYMENT_DOES_NOT_PAYED {
-            get {
-                return ResourceManager.GetString("PAYMENT_DOES_NOT_PAYED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payment must be unique.
-        /// </summary>
-        public static string PAYMENT_MUST_BE_UNIQUE {
-            get {
-                return ResourceManager.GetString("PAYMENT_MUST_BE_UNIQUE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payment was expired.
-        /// </summary>
-        public static string PAYMENT_WAS_EXPIRED {
-            get {
-                return ResourceManager.GetString("PAYMENT_WAS_EXPIRED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Permission does not exist.
-        /// </summary>
-        public static string PERMISSION_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("PERMISSION_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Person is not exist.
-        /// </summary>
-        public static string PERSON_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("PERSON_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Photo was not found.
-        /// </summary>
-        public static string PHOTO_WAS_NOT_FOUND {
-            get {
-                return ResourceManager.GetString("PHOTO_WAS_NOT_FOUND", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pin not exist or expired.
-        /// </summary>
-        public static string PIN_NOT_EXIST_OR_EXPIRED {
-            get {
-                return ResourceManager.GetString("PIN_NOT_EXIST_OR_EXPIRED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Place address.
-        /// </summary>
-        public static string PLACE_ADDRESS {
-            get {
-                return ResourceManager.GetString("PLACE_ADDRESS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Place name.
-        /// </summary>
-        public static string PLACE_NAME {
-            get {
-                return ResourceManager.GetString("PLACE_NAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product does not exist.
-        /// </summary>
-        public static string PRODUCT_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("PRODUCT_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Region does not exist.
-        /// </summary>
-        public static string REGION_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("REGION_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Role does not exist.
-        /// </summary>
-        public static string ROLE_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("ROLE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Role does not exist.
-        /// </summary>
-        public static string ROLE_DOES_NOT_EXIST1 {
-            get {
-                return ResourceManager.GetString("ROLE_DOES_NOT_EXIST1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Role group does not exist.
-        /// </summary>
-        public static string ROLE_GROUP_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("ROLE_GROUP_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Filenames cannot be same.
-        /// </summary>
-        public static string SAME_FILE_NAME {
-            get {
-                return ResourceManager.GetString("SAME_FILE_NAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New password is same with the an old one.
-        /// </summary>
-        public static string SAME_PASSWORD {
-            get {
-                return ResourceManager.GetString("SAME_PASSWORD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Signature is not valid .
-        /// </summary>
-        public static string SIGNATURE_IS_NOT_VALID {
-            get {
-                return ResourceManager.GetString("SIGNATURE_IS_NOT_VALID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sum.
-        /// </summary>
-        public static string SUM {
-            get {
-                return ResourceManager.GetString("SUM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sum more than invoice sum.
-        /// </summary>
-        public static string SUM_MORE_THAN_INVOICE_SUM {
-            get {
-                return ResourceManager.GetString("SUM_MORE_THAN_INVOICE_SUM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tarif is not exist.
-        /// </summary>
-        public static string TARIF_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("TARIF_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This person have not certificate.
-        /// </summary>
-        public static string THIS_PERSON_HAVE_NOT_CERTIFICATE {
-            get {
-                return ResourceManager.GetString("THIS_PERSON_HAVE_NOT_CERTIFICATE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Token.
-        /// </summary>
-        public static string TOKEN {
-            get {
-                return ResourceManager.GetString("TOKEN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Token does not exist.
-        /// </summary>
-        public static string TOKEN_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("TOKEN_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Duration time of invoice&apos;s token.
-        /// </summary>
-        public static string TOKEN_DURATION {
-            get {
-                return ResourceManager.GetString("TOKEN_DURATION", resourceCulture);
+                return ResourceManager.GetString("SUB_ORGANIZATION_IS_BLOCKED", resourceCulture);
             }
         }
         
@@ -1173,15 +480,6 @@ namespace Common.Resources {
         public static string UNAUTHORIZED {
             get {
                 return ResourceManager.GetString("UNAUTHORIZED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unauthorized.
-        /// </summary>
-        public static string UNAUTHORIZED1 {
-            get {
-                return ResourceManager.GetString("UNAUTHORIZED1", resourceCulture);
             }
         }
         
@@ -1213,33 +511,6 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User file does not exist.
-        /// </summary>
-        public static string USER_FILE_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("USER_FILE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User file is exist.
-        /// </summary>
-        public static string USER_FILE_IS_EXIST {
-            get {
-                return ResourceManager.GetString("USER_FILE_IS_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User file type does not exist.
-        /// </summary>
-        public static string USER_FILE_TYPE_DOES_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("USER_FILE_TYPE_DOES_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to User is blocked.
         /// </summary>
         public static string USER_IS_BLOCKED {
@@ -1249,47 +520,11 @@ namespace Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User is not exist.
-        /// </summary>
-        public static string USER_IS_NOT_EXIST {
-            get {
-                return ResourceManager.GetString("USER_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User is not expert or common.
-        /// </summary>
-        public static string USER_IS_NOT_EXPERT_OR_COMMON {
-            get {
-                return ResourceManager.GetString("USER_IS_NOT_EXPERT_OR_COMMON", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to User status is not exist.
         /// </summary>
         public static string USER_STATUS_IS_NOT_EXIST {
             get {
                 return ResourceManager.GetString("USER_STATUS_IS_NOT_EXIST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Username.
-        /// </summary>
-        public static string USERNAME {
-            get {
-                return ResourceManager.GetString("USERNAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Username is exist.
-        /// </summary>
-        public static string USERNAME_IS_EXIST {
-            get {
-                return ResourceManager.GetString("USERNAME_IS_EXIST", resourceCulture);
             }
         }
         

@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Filters\**" />
+    <Compile Remove="Settings\**" />
+    <Content Remove="Filters\**" />
+    <Content Remove="Settings\**" />
+    <EmbeddedResource Remove="Filters\**" />
+    <EmbeddedResource Remove="Settings\**" />
+    <None Remove="Filters\**" />
+    <None Remove="Settings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="3.1.9" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -13,13 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Filters\" />
-    <Folder Include="Settings\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CertificateManager\FrdCoreCrypt.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\FrdCoreCrypt\FrdCoreCrypt.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
