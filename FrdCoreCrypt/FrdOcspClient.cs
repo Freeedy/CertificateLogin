@@ -227,12 +227,15 @@ namespace FrdCoreCrypt
 
         public bool ValidateCertificateChain(X509Certificate2 cert)
         {
+            Console.WriteLine("Revokation Check");
             X509Chain chain = new X509Chain();
-            chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
+            chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
+           // chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllFlags;
             chain.Build(cert);
 
             foreach (X509ChainElement item in chain.ChainElements)
             {
+                Console.WriteLine($"Checking :  {item.Certificate.SubjectName.Name}");
                 if (item.Certificate.Verify() == false)
                 {
                     return false;

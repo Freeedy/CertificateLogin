@@ -3,7 +3,6 @@ D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\bin\De
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfoInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.AssemblyInfo.cs
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\bin\Debug\netcoreapp3.1\SecurityManager.pdb
-D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csprojAssemblyReference.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csproj.CoreCompileInputs.cache
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.dll
 D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.pdb
@@ -25,3 +24,4 @@ C:\Users\Owner\Desktop\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\Securit
 C:\Users\Owner\Desktop\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.dll
 C:\Users\Owner\Desktop\certlogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.pdb
+D:\WorkPlaces\EID\Works\CertLogin\Source\CertificateLogin\SecurityManager\obj\Debug\netcoreapp3.1\SecurityManager.csprojAssemblyReference.cache

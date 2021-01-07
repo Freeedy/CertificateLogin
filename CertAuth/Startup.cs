@@ -1,4 +1,6 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using CertAuth.Installers;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Builder;
@@ -27,16 +29,19 @@ namespace CertAuth
             .AddCertificate(options =>
             {
                 options.AllowedCertificateTypes = CertificateTypes.Chained;
+                options.RevocationFlag = System.Security.Cryptography.X509Certificates.X509RevocationFlag.EntireChain;
+                options.RevocationMode = System.Security.Cryptography.X509Certificates.X509RevocationMode.NoCheck;
                 options.Events = new CertificateAuthenticationEvents
                 {
                     OnCertificateValidated = async (context) =>
                     {
+                        
                         if (context.ClientCertificate == null)
                         {
                             context.Fail("Certificate is null");
                             return;
                         }
-
+                        Console.WriteLine("Validation Start");
                         ContainerResult<ValidateCertificateOutput> data = await context.HttpContext.RequestServices
                         .GetService<ICertificateValidationService>().ValidateCertificate(new ValidateCertificateInput
                         {
@@ -51,7 +56,9 @@ namespace CertAuth
                         context.Principal = new ClaimsPrincipal(new ClaimsIdentity(data.Output.CertificateClaims, context.Scheme.Name));
 
                         context.Success();
+                        
                     }
+                    
                 };
             });
         }

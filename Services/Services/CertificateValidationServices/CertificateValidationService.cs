@@ -13,6 +13,7 @@ using Models.Dtos.RepositoriesDtos.CustomerRepositoryDtos;
 using Models.ServiceParameters.LoginParameters;
 using SecurityManager.Helpers;
 using SecurityManager.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace Services.Services.CertificateValidationServices
@@ -137,6 +138,7 @@ namespace Services.Services.CertificateValidationServices
             CertificateClaimConverterModel certificateClaimConverterModel = _certificateClaimConverter
             .GetClaimsFromCertificate(input.LoginCertificate);
 
+            Console.WriteLine($"CertificateClaims : {certificateClaimConverterModel.ChainValidationStatus}");
             if (certificateClaimConverterModel.CertificateStatus.Status != CertificateStatusEnum.Good)
             {
                 result.ErrorList.Add(new Error
