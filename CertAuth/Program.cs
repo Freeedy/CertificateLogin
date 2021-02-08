@@ -22,7 +22,7 @@ namespace CertAuth
         public static void Main(string[] args) => CreateHostBuilder(args).Build().Run();
 
 
-       // public static void Main(string[] args) => CreateWebHostBuilder(args).Build().Run();
+        // public static void Main(string[] args) => CreateWebHostBuilder(args).Build().Run();
 
         public static void BuildConfiguration()
         {
@@ -38,53 +38,40 @@ namespace CertAuth
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
             BuildConfiguration();
-            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
 
-            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+            XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetEntryAssembly()), new FileInfo("log4net.config"));
 
+            X509Certificate2 certificate = GetServiceCertificate(Configuration.GetSection("AppSetting")["SSlCertname"], Configuration.GetSection("AppSetting")["SSLCertPassw"]);
+            IHostBuilder whb = Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+                webBuilder.ConfigureKestrel(o =>
+                {
+                    o.ConfigureHttpsDefaults(o =>
+                o.ClientCertificateMode =
+                    ClientCertificateMode.RequireCertificate);
+                });
 
-
-
-            var certificate = GetServiceCertificate(Configuration.GetSection("AppSetting")["SSlCertname"], Configuration.GetSection("AppSetting")["SSLCertPassw"]);
-            var whb = Host.CreateDefaultBuilder(args)
-
-          .ConfigureWebHostDefaults(webBuilder =>
-          {
-
-              webBuilder.UseStartup<Startup>();
-              webBuilder.ConfigureKestrel(o =>
-              {
-                  o.ConfigureHttpsDefaults(o =>
-              o.ClientCertificateMode =
-                  ClientCertificateMode.RequireCertificate);
-              });
-
-
-              webBuilder.UseKestrel(options =>
-              {
-                  options.Listen(new IPEndPoint(IPAddress.Any, Convert.ToInt32(Configuration.GetSection("AppSetting")["PortNumber"])), listenOptions =>
-                  {
-                      var httpsConnectionAdapterOptions = new HttpsConnectionAdapterOptions()
-                      {
-                          ClientCertificateMode = ClientCertificateMode.AllowCertificate,
-                          SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
-                          ServerCertificate = certificate
-                          //,
-                          //ServerCertificateSelector= (connectionContext, name) =>
-                          //{
-                          //    return null ;
-                          //}
-                      };
-                      listenOptions.UseHttps(httpsConnectionAdapterOptions);
-                      listenOptions.Protocols = HttpProtocols.Http1;
-                  });
-              }
-                  );
-
-          }
-          );
-
-            ;
+                webBuilder.UseKestrel(options =>
+                {
+                    options.Listen(new IPEndPoint(IPAddress.Any, Convert.ToInt32(Configuration.GetSection("AppSetting")["PortNumber"])), listenOptions =>
+                    {
+                        var httpsConnectionAdapterOptions = new HttpsConnectionAdapterOptions()
+                        {
+                            ClientCertificateMode = ClientCertificateMode.AllowCertificate,
+                            SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
+                            ServerCertificate = certificate
+                            //,
+                            //ServerCertificateSelector= (connectionContext, name) =>
+                            //{
+                            //    return null ;
+                            //}
+                        };
+                        listenOptions.UseHttps(httpsConnectionAdapterOptions);
+                        listenOptions.Protocols = HttpProtocols.Http1;
+                    });
+                });
+            });
 
             return whb;
         }
@@ -92,17 +79,11 @@ namespace CertAuth
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             BuildConfiguration();
-            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
 
-            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+            XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetEntryAssembly()), new FileInfo("log4net.config"));
 
-
-
-
-            var certificate = GetServiceCertificate(Configuration.GetSection("AppSetting")["SSlCertname"], Configuration.GetSection("AppSetting")["SSLCertPassw"]);
-            var webBuilder = WebHost.CreateDefaultBuilder(args);
-
-
+            X509Certificate2 certificate = GetServiceCertificate(Configuration.GetSection("AppSetting")["SSlCertname"], Configuration.GetSection("AppSetting")["SSLCertPassw"]);
+            IWebHostBuilder webBuilder = WebHost.CreateDefaultBuilder(args);
 
             webBuilder.UseStartup<Startup>();
             webBuilder.ConfigureKestrel(o =>
@@ -111,7 +92,6 @@ namespace CertAuth
             o.ClientCertificateMode =
                 ClientCertificateMode.RequireCertificate);
             });
-
 
             webBuilder.UseKestrel(options =>
             {
@@ -133,20 +113,12 @@ namespace CertAuth
                 });
             });
 
-
-
-
-
-
-
             return webBuilder;
         }
+
         private static X509Certificate2 GetServiceCertificate(string subjectName, string password)
         {
-
-            var certbytes = File.ReadAllBytes(subjectName);
-
-            return new X509Certificate2(certbytes, password);
+            return new X509Certificate2(File.ReadAllBytes(subjectName), password);
 
             //using (var certStore = new X509Store(StoreName.My, StoreLocation.CurrentUser))
             //{
