@@ -2532,6 +2532,7 @@
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -2641,6 +2642,7 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2742,7 +2744,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -2932,6 +2934,7 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3458,6 +3461,7 @@
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3828,6 +3832,7 @@
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4016,7 +4021,6 @@
       "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -4126,6 +4130,7 @@
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4161,6 +4166,7 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4375,6 +4381,7 @@
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4904,6 +4911,7 @@
       "path": "system.runtime.serialization.json/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4962,6 +4970,7 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5928,6 +5937,7 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6072,25 +6082,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\farid\\.nuget\\packages\\": {},
+    "C:\\Users\\emin.aliyev\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertAuth\\CertAuth.csproj",
+      "projectUniqueName": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertAuth\\CertAuth.csproj",
       "projectName": "CertAuth",
-      "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertAuth\\CertAuth.csproj",
-      "packagesPath": "C:\\Users\\farid\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\CertAuth\\obj\\",
+      "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertAuth\\CertAuth.csproj",
+      "packagesPath": "C:\\Users\\emin.aliyev\\.nuget\\packages\\",
+      "outputPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\CertAuth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\farid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emin.aliyev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6099,20 +6109,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\Dev\\Github\\NUgetSource": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\DataAccess\\DataAccess.csproj"
+            "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\DataAccess\\DataAccess.csproj"
             },
-            "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
-              "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj"
+            "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj": {
+              "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\FrdCoreCrypt\\FrdCoreCrypt.csproj"
             },
-            "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj": {
-              "projectPath": "D:\\WorkPlaces\\EID\\Works\\CertLogin\\Source\\CertificateLogin\\Services\\Services.csproj"
+            "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj": {
+              "projectPath": "D:\\MHM\\Projects\\Bitbucket\\certlogin\\Services\\Services.csproj"
             }
           }
         }
@@ -6125,6 +6135,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Certificate": {
             "target": "Package",
@@ -6158,7 +6169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
