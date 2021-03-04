@@ -3,10 +3,10 @@
 	public enum ErrorHttpStatus : int
 	{
 		SUCCESS = 200,
-		VALIDATION = 400,
+		BADREQUEST = 400,
 		UNAUTHORIZED = 401,
 		FORBIDDEN = 403,
-		NOT_FOUND = 404,
+		NOTFOUND = 404,
 		INTERNAL = 500,
 	}
 }

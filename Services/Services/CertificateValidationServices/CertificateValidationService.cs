@@ -71,7 +71,7 @@ namespace Services.Services.CertificateValidationServices
                 {
                     ErrorCode = ErrorCodes.CUSTOMER_DOES_NOT_EXIST,
                     ErrorMessage = Resource.CUSTOMER_DOES_NOT_EXIST,
-                    StatusCode = ErrorHttpStatus.NOT_FOUND 
+                    StatusCode = ErrorHttpStatus.NOTFOUND 
                 });
 
                 return result;
@@ -83,7 +83,7 @@ namespace Services.Services.CertificateValidationServices
                 {
                     ErrorCode = ErrorCodes.ORGANIZATION_IS_BLOCKED,
                     ErrorMessage = Resource.ORGANIZATION_IS_BLOCKED,
-                    StatusCode = ErrorHttpStatus.NOT_FOUND 
+                    StatusCode = ErrorHttpStatus.NOTFOUND 
                 });
 
                 return result;

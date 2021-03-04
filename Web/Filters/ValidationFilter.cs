@@ -29,7 +29,7 @@ namespace Web.Filters
 						{
 							ErrorCode = ErrorCodes.INPUT_IS_NOT_VALID,
 							ErrorMessage = Resource.INVALID_INPUT,
-							StatusCode = ErrorHttpStatus.VALIDATION
+							StatusCode = ErrorHttpStatus.BADREQUEST
 						}
 					}
 				});
@@ -44,7 +44,7 @@ namespace Web.Filters
 				{
 					ErrorCode = ErrorCodes.INPUT_IS_NOT_VALID,
 					ErrorMessage = keyValuePair.Value.Errors.FirstOrDefault(x => x.ErrorMessage != string.Empty)?.ErrorMessage ?? Resource.INVALID_INPUT,
-					StatusCode = ErrorHttpStatus.VALIDATION
+					StatusCode = ErrorHttpStatus.BADREQUEST
 				}).ToList()
 			});
 		}
